@@ -1,0 +1,15 @@
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\Debug\Destiny2PowerLevelMax.exe.config
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\Debug\Destiny2PowerLevelMax.exe
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\Debug\Destiny2PowerLevelMax.pdb
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.csprojAssemblyReference.cache
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\MainWindow.g.cs
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\App.g.cs
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax_MarkupCompile.cache
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax_MarkupCompile.lref
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\MainWindow.baml
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.g.resources
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.Properties.Resources.resources
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.csproj.GenerateResource.cache
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.csproj.CoreCompileInputs.cache
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.exe
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.pdb
