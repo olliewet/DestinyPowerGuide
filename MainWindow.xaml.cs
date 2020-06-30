@@ -24,6 +24,7 @@ namespace Destiny2PowerLevelMax
         {
             InitializeComponent();
             clear();
+            
         }
 
         private void clear()
@@ -37,6 +38,20 @@ namespace Destiny2PowerLevelMax
             Prim_tb.Clear();
             Sec_tb.Clear();
             Power_tb.Clear();
+            
+        }
+
+        private void val()
+        {
+            Helment_tb.Text = "750";
+            Arms_tb.Text = "750";
+            Chest_tb.Text = "750";
+            Legs_tb.Text = "750";
+            Class_tb.Text = "750";
+
+            Prim_tb.Text = "750";
+            Sec_tb.Text = "750";
+            Power_tb.Text = "750";
         }
 
         private void Calculate_Click(object sender, RoutedEventArgs e)
@@ -56,8 +71,9 @@ namespace Destiny2PowerLevelMax
                 double ant = cal / 8;
                 double roun = Math.Round(ant, 1);
                 double _base = Math.Ceiling(ant);
-                Score_tb.Text = roun.ToString();
-                avg(_base, roun);
+                powertext.Content = roun.ToString();
+                avg(_base, roun);             
+                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,_base);
             }
             catch
             {
@@ -65,11 +81,101 @@ namespace Destiny2PowerLevelMax
             }
         }
 
+        private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base)
+        {
+            if( hel < _base)
+            {
+                Helment_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            } 
+            else
+            {
+                Helment_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (arms < _base)
+            {
+                Arms_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Arms_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (chest < _base)
+            {
+                Chest_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Chest_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (Class < _base)
+            {
+                Class_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Class_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (Legs < _base)
+            {
+                Legs_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Legs_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (Prim < _base)
+            {
+                Prim_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Prim_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (secondary < _base)
+            {
+                Sec_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Sec_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+            if (Power < _base)
+            {
+                Power_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+            }
+            else
+            {
+                Power_tb.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+
+        }
+
         private void avg(double _base, double power )
         {
             double answer = _base - power;
-            double an = answer * 8;
-            upgrade_tb.Text = an.ToString();
+            double an = answer * 8;          
+            double increase = Math.Ceiling(an);
+            if (power % 1 == 0)
+            {
+                IncreaseVal.Content = "8";
+            }
+            else
+            {
+                IncreaseVal.Content = increase.ToString();
+            }
+
+        }
+
+        private void Fill_Values_Click(object sender, RoutedEventArgs e)
+        {
+            val();
         }
     }
 }
