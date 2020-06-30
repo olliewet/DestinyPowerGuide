@@ -35,7 +35,7 @@ namespace Destiny2PowerLevelMax
             Class_tb.Clear();
 
             Prim_tb.Clear();
-            Power_tb.Clear();
+            Sec_tb.Clear();
             Power_tb.Clear();
         }
 
@@ -43,25 +43,33 @@ namespace Destiny2PowerLevelMax
         {
             try
             {
-                float hel = float.Parse(Helment_tb.Text);
-                float arms = float.Parse(Arms_tb.Text);
-                float Chest = float.Parse(Chest_tb.Text);
-                float Class = float.Parse(Class_tb.Text);
-                float Legs = float.Parse(Legs_tb.Text);
-                float Prim = float.Parse(Prim_tb.Text);
-                float Secondary = float.Parse(Power_tb.Text);
-                float Power = float.Parse(Power_tb.Text);
+                double hel = double.Parse(Helment_tb.Text);
+                double arms = double.Parse(Arms_tb.Text);
+                double Chest = double.Parse(Chest_tb.Text);
+                double Class = double.Parse(Class_tb.Text);
+                double Legs = double.Parse(Legs_tb.Text);
+                double Prim = double.Parse(Prim_tb.Text);
+                double Secondary = double.Parse(Sec_tb.Text);
+                double Power = double.Parse(Power_tb.Text);
 
-                float cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
-                float ant = cal / 8;
-
-
-                Score_tb.Text = ant.ToString();
+                double cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
+                double ant = cal / 8;
+                double roun = Math.Round(ant, 1);
+                double _base = Math.Ceiling(ant);
+                Score_tb.Text = roun.ToString();
+                avg(_base, roun);
             }
             catch
             {
                 MessageBox.Show("Error");
             }
+        }
+
+        private void avg(double _base, double power )
+        {
+            double answer = _base - power;
+            double an = answer * 8;
+            upgrade_tb.Text = an.ToString();
         }
     }
 }
