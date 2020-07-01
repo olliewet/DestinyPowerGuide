@@ -73,7 +73,7 @@ namespace Destiny2PowerLevelMax
                 double _base = Math.Ceiling(ant);
                 powertext.Content = roun.ToString();
                 avg(_base, roun);             
-                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,_base);
+                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,ant);
             }
             catch
             {
@@ -82,27 +82,32 @@ namespace Destiny2PowerLevelMax
         }
 
         private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base)
-        {
-            if( hel < _base)
+        {          
+            int counter = 0;
+            double basedown = Math.Floor(_base);
+            if( hel < basedown)
             {
                 Helment_tb.BorderBrush = System.Windows.Media.Brushes.Red;
+                counter++;
             } 
             else
             {
                 Helment_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (arms < _base)
+            if (arms < basedown)
             {
+                counter++;
                 Arms_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
-            {
+            {             
                 Arms_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (chest < _base)
+            if (chest < basedown)
             {
+                counter++;
                 Chest_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
@@ -110,44 +115,51 @@ namespace Destiny2PowerLevelMax
                 Chest_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (Class < _base)
+            if (Class < basedown)
             {
+                counter++;
                 Class_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
-            {
+            {         
                 Class_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (Legs < _base)
+            if (Legs < basedown)
             {
+                counter++;
                 Legs_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
-            {
+            {               
                 Legs_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (Prim < _base)
+            if (Prim < basedown)
             {
+                counter++;
                 Prim_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
             {
+                
                 Prim_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (secondary < _base)
+            if (secondary < basedown)
             {
+                counter++;
                 Sec_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
             {
+                
                 Sec_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
-            if (Power < _base)
+            if (Power < basedown)
             {
+                counter++;
                 Power_tb.BorderBrush = System.Windows.Media.Brushes.Red;
             }
             else
@@ -155,6 +167,40 @@ namespace Destiny2PowerLevelMax
                 Power_tb.BorderBrush = System.Windows.Media.Brushes.Green;
             }
 
+            
+            SuggestedUpgrade(counter);
+        }
+        private void SuggestedUpgrade(int counter)
+        {
+            switch (counter)
+            {
+                case 0: SuggestedRoute.Text = "No Pieces are under Leveled, Suggested Route Powerfuls ";
+                    break; 
+                case 1:
+                    SuggestedRoute.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level";
+                    break;
+                case 2:
+                    SuggestedRoute.Text = "Two Piece is Under Leveled";
+                    break;
+                case 3:
+                    SuggestedRoute.Text = "Three Piece is Under Leveled ";
+                    break;
+                case 4:
+                    SuggestedRoute.Text = "Four Piece is Under Leveled ";
+                    break;
+                case 5:
+                    SuggestedRoute.Text = "Five Piece is Under Leveled ";
+                    break;
+                case 6:
+                    SuggestedRoute.Text = "Six Piece is Under Leveled ";
+                    break;
+                case 7:
+                    SuggestedRoute.Text = "Seven Piece is Under Leveled ";
+                    break;
+                case 8:
+                    SuggestedRoute.Text = "Eight Piece is Under Leveled ";
+                    break;
+            }
         }
 
         private void avg(double _base, double power )

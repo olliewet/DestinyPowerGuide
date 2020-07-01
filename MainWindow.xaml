@@ -30,10 +30,11 @@
 
         <TextBox x:Name="Power_tb" HorizontalAlignment="Left" Height="23" Margin="120,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Power_lb" Content="Power Weapon" HorizontalAlignment="Left" Margin="120,150,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="330,332,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="75"/>
-        <Label  x:Name="powertext"  Content="Label" HorizontalAlignment="Left" Margin="311,282,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36"/>
+        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="333,333,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="75"/>
+        <Label  x:Name="powertext"  Content="" HorizontalAlignment="Left" Margin="333,282,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="87"/>
         <Label  x:Name="NextIncrease"  Content="For Next Power Level Increase any Armour By" HorizontalAlignment="Left" Margin="222,356,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
         <Label  x:Name="IncreaseVal"  Content="0" HorizontalAlignment="Left" Margin="490,356,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16"/>
         <Button x:Name="Fill_Values" Content="Fill Valves" HorizontalAlignment="Left" Margin="19,12,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="75"/>
+        <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="647,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="261" Width="122"/>
     </Grid>
 </Window>
