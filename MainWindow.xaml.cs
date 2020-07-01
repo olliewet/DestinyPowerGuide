@@ -23,10 +23,10 @@ namespace Destiny2PowerLevelMax
         public MainWindow()
         {
             InitializeComponent();
-            clear();
-            
+            clear();        
         }
-
+        #region Misc Methods 
+        //Used for clearing the textbox of text when application is opened
         private void clear()
         {
             Helment_tb.Clear();
@@ -41,6 +41,7 @@ namespace Destiny2PowerLevelMax
             
         }
 
+        //Used as testing to automatically fill the boxes with values 
         private void val()
         {
             Helment_tb.Text = "750";
@@ -54,6 +55,10 @@ namespace Destiny2PowerLevelMax
             Power_tb.Text = "750";
         }
 
+        #endregion
+
+        #region Buttons 
+        //Button event which calculates the users power level and displays it to a label 
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -80,7 +85,16 @@ namespace Destiny2PowerLevelMax
                 MessageBox.Show("Error");
             }
         }
+        //Button click that calls the value fill method, that fills the text boxes with values
+        private void Fill_Values_Click(object sender, RoutedEventArgs e)
+        {
+            val();
+        }
 
+        #endregion
+
+        #region Functionality Methods 
+        //Method for changing the colour of the text box depending on the gear score of the piece of armour 
         private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base)
         {          
             int counter = 0;
@@ -170,6 +184,8 @@ namespace Destiny2PowerLevelMax
             
             SuggestedUpgrade(counter);
         }
+       
+        //Method for suggesting how many pieces need upgrading and best suited way to upgrade piece 
         private void SuggestedUpgrade(int counter)
         {
             switch (counter)
@@ -203,6 +219,7 @@ namespace Destiny2PowerLevelMax
             }
         }
 
+        //Method for working out the users average power level
         private void avg(double _base, double power )
         {
             double answer = _base - power;
@@ -216,12 +233,8 @@ namespace Destiny2PowerLevelMax
             {
                 IncreaseVal.Content = increase.ToString();
             }
-
         }
+        #endregion
 
-        private void Fill_Values_Click(object sender, RoutedEventArgs e)
-        {
-            val();
-        }
     }
 }
