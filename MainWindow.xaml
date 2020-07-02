@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="332*"/>
+            <RowDefinition Height="87*"/>
+        </Grid.RowDefinitions>
         <TextBox x:Name="Helment_tb" HorizontalAlignment="Left" Height="23" Margin="500,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Helmet_lb" Content="Helment" HorizontalAlignment="Left" Margin="500,27,0,0" VerticalAlignment="Top"/>
 
@@ -22,19 +26,37 @@
         <TextBox x:Name="Class_tb" HorizontalAlignment="Left" Height="23" Margin="500,297,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Class_lb" Content="Class" HorizontalAlignment="Left" Margin="500,271,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Prim_tb" HorizontalAlignment="Left" Height="23" Margin="120,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="Prim_lb" Content="Primary Weapon" HorizontalAlignment="Left" Margin="120,27,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Prim_tb" HorizontalAlignment="Left" Height="23" Margin="143,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Prim_lb" Content="Primary Weapon" HorizontalAlignment="Left" Margin="143,27,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Sec_tb" HorizontalAlignment="Left" Height="23" Margin="120,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="Sec_lb" Content="Secondary Weapon" HorizontalAlignment="Left" Margin="120,86,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="Sec_tb" HorizontalAlignment="Left" Height="23" Margin="143,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Sec_lb" Content="Secondary Weapon" HorizontalAlignment="Left" Margin="143,86,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Power_tb" HorizontalAlignment="Left" Height="23" Margin="120,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-        <Label x:Name="Power_lb" Content="Power Weapon" HorizontalAlignment="Left" Margin="120,150,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="333,333,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="75"/>
-        <Label  x:Name="powertext"  Content="" HorizontalAlignment="Left" Margin="333,282,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="87"/>
-        <Label  x:Name="NextIncrease"  Content="For Next Power Level Increase any Armour By" HorizontalAlignment="Left" Margin="222,356,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14"/>
-        <Label  x:Name="IncreaseVal"  Content="0" HorizontalAlignment="Left" Margin="490,356,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16"/>
-        <Button x:Name="Fill_Values" Content="Fill Valves" HorizontalAlignment="Left" Margin="19,12,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="75"/>
+        <TextBox x:Name="Power_tb" HorizontalAlignment="Left" Height="23" Margin="143,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Label x:Name="Power_lb" Content="Power Weapon" HorizontalAlignment="Left" Margin="143,150,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Calculate" Content="Calculate" HorizontalAlignment="Left" Margin="333,0.938,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="75" Grid.Row="1"/>
+        <Label  x:Name="powertext"  Content="" HorizontalAlignment="Left" Margin="303,258,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="125"/>
+        <Label  x:Name="NextIncrease"  Content="For Next Power Level Increase any Armour By" HorizontalAlignment="Left" Margin="222,23.938,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" Grid.Row="1"/>
+        <Label  x:Name="IncreaseVal"  Content="0" HorizontalAlignment="Left" Margin="490,23.938,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Height="27" Grid.Row="1"/>
         <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="647,59,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Height="261" Width="122"/>
+        <ProgressBar x:Name="pb_power" HorizontalAlignment="Left" Height="13" Margin="277,50.938,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="191" Grid.Row="1"/>
+        <TabControl x:Name="UF_Links" HorizontalAlignment="Left" Height="461" Margin="0,-42,0,0" VerticalAlignment="Top" Width="127" Grid.RowSpan="2">
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5" Margin="0,0,-6,0">
+                    <Button x:Name="UseFulSites" Content="Useful Links" HorizontalAlignment="Left" Margin="19,23,0,0" Click="UseFulSites_Click"  VerticalAlignment="Top" Width="86"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="TabItem">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40*"/>
+                        <ColumnDefinition Width="81*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="EngramLink" Content="Vendor Engrams" HorizontalAlignment="Left" Margin="10,24,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="101" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+        <Button x:Name="Fill_Values" Content="Fill Valves" HorizontalAlignment="Left" Margin="698,10,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="84"/>
+
     </Grid>
 </Window>

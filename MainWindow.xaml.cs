@@ -63,6 +63,7 @@ namespace Destiny2PowerLevelMax
         {
             try
             {
+                //Storing The Levels From the input into appropriate variables
                 double hel = double.Parse(Helment_tb.Text);
                 double arms = double.Parse(Arms_tb.Text);
                 double Chest = double.Parse(Chest_tb.Text);
@@ -72,16 +73,28 @@ namespace Destiny2PowerLevelMax
                 double Secondary = double.Parse(Sec_tb.Text);
                 double Power = double.Parse(Power_tb.Text);
 
+                //Calculation to Find out the average Power Level of The User
                 double cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
-                double ant = cal / 8;
-                double roun = Math.Round(ant, 1);
-                double _base = Math.Ceiling(ant);
-                powertext.Content = roun.ToString();
-                avg(_base, roun);             
-                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,ant);
+                double PlValue = cal / 8;
+
+                //Rounding up the Power Level, Rounding Down the PowerLevel
+                double plRoundUp = Math.Round(PlValue, 1);
+                double plRoundDown = Math.Floor(PlValue);
+                double _basePl = Math.Ceiling(PlValue);
+
+
+                //Displaying The Power Level Code
+                powertext.Content = plRoundUp.ToString();
+                avg(_basePl, plRoundUp);             
+                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue);
+                pb_power.Minimum = plRoundDown;
+                pb_power.Maximum = _basePl;
+                pb_power.Value = PlValue;
+               
             }
             catch
             {
+                //Very Basic Error Prevention Needs Editing 
                 MessageBox.Show("Error");
             }
         }
@@ -196,25 +209,25 @@ namespace Destiny2PowerLevelMax
                     SuggestedRoute.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level";
                     break;
                 case 2:
-                    SuggestedRoute.Text = "Two Piece is Under Leveled";
+                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                     break;
                 case 3:
-                    SuggestedRoute.Text = "Three Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                     break;
                 case 4:
-                    SuggestedRoute.Text = "Four Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                     break;
                 case 5:
-                    SuggestedRoute.Text = "Five Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                     break;
                 case 6:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                     break;
                 case 7:
-                    SuggestedRoute.Text = "Seven Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Seven Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power ";
                     break;
                 case 8:
-                    SuggestedRoute.Text = "Eight Piece is Under Leveled ";
+                    SuggestedRoute.Text = "Eight Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power ";
                     break;
             }
         }
@@ -236,5 +249,14 @@ namespace Destiny2PowerLevelMax
         }
         #endregion
 
+        private void UseFulSites_Click(object sender, RoutedEventArgs e)
+        {
+            UF_Links.SelectedIndex = 1;
+        }
+
+        private void EngramLink_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vendorengrams.xyz/");
+        }
     }
 }
