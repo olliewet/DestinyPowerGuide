@@ -39,6 +39,7 @@ namespace Destiny2PowerLevelMax
             Sec_tb.Clear();
             Power_tb.Clear();
             
+            
         }
 
         //Used as testing to automatically fill the boxes with values 
@@ -87,6 +88,7 @@ namespace Destiny2PowerLevelMax
                 powertext.Content = plRoundUp.ToString();
                 avg(_basePl, plRoundUp);             
                 colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue);
+                pb_power.Visibility = Visibility.Visible;
                 pb_power.Minimum = plRoundDown;
                 pb_power.Maximum = _basePl;
                 pb_power.Value = PlValue;
@@ -249,14 +251,23 @@ namespace Destiny2PowerLevelMax
         }
         #endregion
 
+        #region Links
+
         private void UseFulSites_Click(object sender, RoutedEventArgs e)
         {
-            UF_Links.SelectedIndex = 1;
+            
         }
 
         private void EngramLink_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://vendorengrams.xyz/");
         }
+
+        private void DestinyItem_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://destinyitemmanager.com/");
+        }
+        #endregion 
+
     }
 }
