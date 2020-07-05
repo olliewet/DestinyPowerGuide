@@ -17,3 +17,5 @@ C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\D
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\Debug\WpfAnimatedGif.pdb
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\bin\Debug\WpfAnimatedGif.xml
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Destiny2PowerLevelMax.csproj.CopyComplete
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Rewards.g.cs
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Rewards.baml

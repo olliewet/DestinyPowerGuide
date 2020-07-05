@@ -1,0 +1,17 @@
+﻿<Window x:Class="Destiny2PowerLevelMax.Rewards"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Destiny2PowerLevelMax"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="500" Top="300"
+        Title="Rewards" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+
+            <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+    </Grid>
+</Window>

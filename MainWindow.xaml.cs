@@ -86,7 +86,7 @@ namespace Destiny2PowerLevelMax
 
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
-                avg(_basePl, plRoundUp);             
+                Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
                 colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue);
                 pb_power.Visibility = Visibility.Visible;
                 pb_power.Minimum = plRoundDown;
@@ -197,62 +197,17 @@ namespace Destiny2PowerLevelMax
             }
 
             
-            SuggestedUpgrade(counter);
+            Destiny2Logic.SuggestedUpgrade(counter, SuggestedRoute);
         }
        
-        //Method for suggesting how many pieces need upgrading and best suited way to upgrade piece 
-        private void SuggestedUpgrade(int counter)
-        {
-            switch (counter)
-            {
-                case 0: SuggestedRoute.Text = "No Pieces are under Leveled, Suggested Route Powerfuls ";
-                    break; 
-                case 1:
-                    SuggestedRoute.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level";
-                    break;
-                case 2:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
-                    break;
-                case 3:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
-                    break;
-                case 4:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
-                    break;
-                case 5:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
-                    break;
-                case 6:
-                    SuggestedRoute.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
-                    break;
-                case 7:
-                    SuggestedRoute.Text = "Seven Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power ";
-                    break;
-                case 8:
-                    SuggestedRoute.Text = "Eight Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power ";
-                    break;
-            }
-        }
+       
+        
 
-        //Method for working out the users average power level
-        private void avg(double _base, double power )
-        {
-            double answer = _base - power;
-            double an = answer * 8;          
-            double increase = Math.Ceiling(an);
-            if (power % 1 == 0)
-            {
-                IncreaseVal.Content = "8";
-            }
-            else
-            {
-                IncreaseVal.Content = increase.ToString();
-            }
-        }
+        
+       
         #endregion
 
         #region Links
-
         private void UseFulSites_Click(object sender, RoutedEventArgs e)
         {
             
@@ -267,7 +222,13 @@ namespace Destiny2PowerLevelMax
         {
             System.Diagnostics.Process.Start("https://destinyitemmanager.com/");
         }
-        #endregion 
+        #endregion
 
+        private void Rewards_Click(object sender, RoutedEventArgs e)
+        {
+            var rewards = new Rewards();
+            this.Close();
+            rewards.Show();
+        }
     }
 }

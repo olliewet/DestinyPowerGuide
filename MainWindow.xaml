@@ -6,6 +6,8 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:Destiny2PowerLevelMax"
         mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="500" Top="300"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
@@ -47,8 +49,6 @@
         <Label  x:Name="IncreaseVal"  Foreground="Black" Content="0" HorizontalAlignment="Left" Margin="392,28,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Height="27" Grid.Row="1"/>
         <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="660,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="261" Width="122"/>
         <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="277,60,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="247" Grid.Row="1"/>
-
-        <Button x:Name="Fill_Values" Content="Fill Valves" HorizontalAlignment="Left" Margin="720,10,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="62"/>
         <Grid Background="Transparent" Margin="0,0,663,0" Grid.RowSpan="2">
 
             <Button x:Name="EngramLink" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" Margin="-4,59,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="133" Height="41">
@@ -58,6 +58,8 @@
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\DIM.png" />
             </Button>
             <Label Content="Useful Links" HorizontalAlignment="Left" Margin="26,28,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Valves" HorizontalAlignment="Left" Margin="0,151,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+            <Button x:Name="Rewards" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="0,198,0,0" Click="Rewards_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
         </Grid>
 
     </Grid>
