@@ -56,6 +56,21 @@ namespace Destiny2PowerLevelMax
             Sec_tb.Text = "750";
             Power_tb.Text = "750";
         }
+        private void PowerMethod(double power)
+        {
+            if (power < 1000)
+            {
+                TypeOfGrind.Content = "Softcap Grind";
+            }
+            else if (power >= 1000 && power < 1050)
+            {
+                TypeOfGrind.Content = "Powerful Grind";
+            } 
+            else if ( power >= 1050 )
+            {
+                TypeOfGrind.Content = "Pinnacle Grind";
+            }
+        }
 
         #endregion
 
@@ -88,7 +103,8 @@ namespace Destiny2PowerLevelMax
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
                 Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
-                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue);
+                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
+                PowerMethod(plRoundUp);
                 pb_power.Visibility = Visibility.Visible;
                 pb_power.Minimum = plRoundDown;
                 pb_power.Maximum = _basePl;
@@ -111,7 +127,7 @@ namespace Destiny2PowerLevelMax
 
         #region Functionality Methods 
         //Method for changing the colour of the text box depending on the gear score of the piece of armour 
-        private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base)
+        private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
         {          
             int counter = 0;
             double basedown = Math.Floor(_base);
@@ -198,7 +214,7 @@ namespace Destiny2PowerLevelMax
             }
 
             
-            Destiny2Logic.SuggestedUpgrade(counter, SuggestedRoute);
+            Destiny2Logic.SuggestedUpgrade(mainpower,counter, SuggestedRoute);
         }
        
        
