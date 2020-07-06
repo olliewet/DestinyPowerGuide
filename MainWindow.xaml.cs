@@ -25,6 +25,7 @@ namespace Destiny2PowerLevelMax
             InitializeComponent();
             clear();        
         }
+
         #region Misc Methods 
         //Used for clearing the textbox of text when application is opened
         private void clear()
@@ -97,7 +98,7 @@ namespace Destiny2PowerLevelMax
             catch
             {
                 //Very Basic Error Prevention Needs Editing 
-                MessageBox.Show("Error");
+                MessageBox.Show("Please Enter Valid Gear Scores Within the Provided Boxes");
             }
         }
         //Button click that calls the value fill method, that fills the text boxes with values
@@ -224,11 +225,20 @@ namespace Destiny2PowerLevelMax
         }
         #endregion
 
+        #region New Window Buttons 
         private void Rewards_Click(object sender, RoutedEventArgs e)
         {
             var rewards = new Rewards();
             this.Close();
             rewards.Show();
         }
+
+        private void Prep_Click(object sender, RoutedEventArgs e)
+        {
+            var Prep = new Preparation();
+            this.Close();
+            Prep.Show();
+        }
+        #endregion
     }
 }

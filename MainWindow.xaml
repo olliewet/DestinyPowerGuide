@@ -47,19 +47,20 @@
         <Label  x:Name="powertext"  Content="" HorizontalAlignment="Left" Margin="355,246,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="123"/>
         <Label  x:Name="NextIncrease" Foreground="Black" Content="For Next Power Level Increase any Armour By" HorizontalAlignment="Left" Margin="266,10,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" Grid.Row="1"/>
         <Label  x:Name="IncreaseVal"  Foreground="Black" Content="0" HorizontalAlignment="Left" Margin="392,28,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Height="27" Grid.Row="1"/>
-        <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="660,58,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="261" Width="122"/>
-        <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="277,60,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="247" Grid.Row="1"/>
+        <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="282,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="233"/>
+        <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="282,60,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="233" Grid.Row="1"/>
         <Grid Background="Transparent" Margin="0,0,663,0" Grid.RowSpan="2">
 
-            <Button x:Name="EngramLink" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" Margin="-4,59,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="133" Height="41">
+            <Button x:Name="EngramLink" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" Margin="-4,337,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="133" Height="41">
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\engram.png" />
             </Button>
-            <Button x:Name="DestinyItem" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-4,105,0,0" Click="DestinyItem_Click" VerticalAlignment="Top" Width="133" Height="41">
+            <Button x:Name="DestinyItem" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-4,378,0,0" Click="DestinyItem_Click" VerticalAlignment="Top" Width="133" Height="41">
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\DIM.png" />
             </Button>
-            <Label Content="Useful Links" HorizontalAlignment="Left" Margin="26,28,0,0" VerticalAlignment="Top"/>
-            <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Valves" HorizontalAlignment="Left" Margin="0,151,0,0" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
-            <Button x:Name="Rewards" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="0,198,0,0" Click="Rewards_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
+            <Label Content="Useful Links" HorizontalAlignment="Left" Margin="26,311,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Values" HorizontalAlignment="Left" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+            <Button x:Name="Rewards" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="0,42,0,0" Click="Rewards_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
+            <Button x:Name="Prep" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="0,84,0,0" Click="Prep_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
         </Grid>
 
     </Grid>

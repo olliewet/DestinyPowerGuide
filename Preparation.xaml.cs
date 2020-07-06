@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace Destiny2PowerLevelMax
 {
     /// <summary>
-    /// Interaction logic for Rewards.xaml
+    /// Interaction logic for Preparation.xaml
     /// </summary>
-    public partial class Rewards : Window
+    public partial class Preparation : Window
     {
-        public Rewards()
+        public Preparation()
         {
             InitializeComponent();
         }

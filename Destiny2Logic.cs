@@ -34,7 +34,7 @@ namespace Destiny2PowerLevelMax
                     textBlock.Text = "No Pieces are under Leveled, Suggested Route Powerfuls ";
                     break;
                 case 1:
-                    textBlock.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level";
+                    textBlock.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level, view rewards for detailed information on type of rewards";
                     break;
                 case 2:
                     textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
