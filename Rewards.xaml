@@ -14,5 +14,19 @@
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+        <Button x:Name="Soft" Background="Transparent" BorderThickness="0" Content="Soft Cap" HorizontalAlignment="Left" Margin="0,103,0,0" Click="Soft_Click" VerticalAlignment="Top" Width="100" Height="42"/>
+        <Button x:Name="Power" Background="Transparent" BorderThickness="0" Content="Powerful Cap" HorizontalAlignment="Left" Margin="0,145,0,0" Click="Power_Click"  VerticalAlignment="Top" Width="100" Height="42"/>
+        <Button x:Name="Pinn" Background="Transparent" BorderThickness="0" Content="Pinnacle Cap" HorizontalAlignment="Left" Margin="0,187,0,0" Click="Pinn_Click"  VerticalAlignment="Top" Width="100" Height="42"/>
+        <TabControl x:Name="RewardInfo_TB" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="283" Margin="100,81,0,0" VerticalAlignment="Top" Width="607">
+            <TabItem x:Name="SoftCap_Header" Header="SoftCap">
+                <Grid Background="Transparent"/>
+            </TabItem>
+            <TabItem x:Name="PowerCap_Header" Header="Powerful Cap">
+                <Grid Background="Transparent"/>
+            </TabItem>
+            <TabItem x:Name="PinnCap_Header" Header="Pinnacle Cap">
+                <Grid Background="Transparent"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Window>

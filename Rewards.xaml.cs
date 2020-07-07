@@ -22,13 +22,40 @@ namespace Destiny2PowerLevelMax
         public Rewards()
         {
             InitializeComponent();
+            hidehead();
         }
-
+        private void hidehead()
+        {
+            SoftCap_Header.Visibility = Visibility.Collapsed;
+            PowerCap_Header.Visibility = Visibility.Collapsed;
+            PinnCap_Header.Visibility = Visibility.Collapsed;
+        }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             var home = new MainWindow();
             this.Close();
             home.Show();
+        }
+
+        private void Soft_Click(object sender, RoutedEventArgs e)
+        {
+            RewardInfo_TB.SelectedIndex = 0;
+        }
+
+        private void Power_Click(object sender, RoutedEventArgs e)
+        {
+            RewardInfo_TB.SelectedIndex = 1;
+
+        }
+
+        private void Pinn_Click(object sender, RoutedEventArgs e)
+        {
+            RewardInfo_TB.SelectedIndex = 2;
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
