@@ -9,7 +9,14 @@ namespace Destiny2PowerLevelMax
 {
     public class Destiny2Logic
     {
-        //Method for working out the users average power level
+        /// <summary>
+        /// Destiny 2 main leveling chase is called Power, Power is calculated by working out an average of the user gear score, 
+        /// this method works out how much power the user requires on a certain piece of gear to reach the next power mark, this method
+        /// revolves around simple division and substraction, however uses an if statement to check if the user is already at a full level. 
+        /// </summary>
+        /// <param name="_base"></param>
+        /// <param name="power"></param>
+        /// <param name="label"></param>     
         public static void avg(double _base, double power, Label label)
         {
             double answer = _base - power;
@@ -25,7 +32,13 @@ namespace Destiny2PowerLevelMax
             }
         }
 
-        //Method for suggesting how many pieces need upgrading and best suited way to upgrade piece 
+        /// <summary>
+        /// This method uses an if statement to check which part of the power grind the user is on, and with that information a counter is then user to calculate how
+        /// many pieces of armour are underleveled and then suggests to the user what activites can be completed to min/max.
+        /// </summary>
+        /// <param name="power"></param>
+        /// <param name="counter"></param>
+        /// <param name="textBlock"></param>
         public static void SuggestedUpgrade(double power, int counter, TextBlock textBlock)
         {
             if (power >= 1000 && power < 1050)
