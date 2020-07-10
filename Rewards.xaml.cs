@@ -23,12 +23,22 @@ namespace Destiny2PowerLevelMax
         {
             InitializeComponent();
             hidehead();
+            tbReadOnly();
+            
         }
         private void hidehead()
         {
+            Info_Header.Visibility = Visibility.Collapsed;
             SoftCap_Header.Visibility = Visibility.Collapsed;
             PowerCap_Header.Visibility = Visibility.Collapsed;
             PinnCap_Header.Visibility = Visibility.Collapsed;
+        }
+
+        private void tbReadOnly()
+        {
+            softTB.IsReadOnly = true;
+            powerTB.IsReadOnly = true;
+            pinnTB.IsReadOnly = true;
         }
         private void Home_Click(object sender, RoutedEventArgs e)
         {
@@ -39,21 +49,31 @@ namespace Destiny2PowerLevelMax
 
         private void Soft_Click(object sender, RoutedEventArgs e)
         {
-            RewardInfo_TB.SelectedIndex = 0;
+            RewardInfo_TB.SelectedIndex = 1;
         }
 
         private void Power_Click(object sender, RoutedEventArgs e)
         {
-            RewardInfo_TB.SelectedIndex = 1;
+            RewardInfo_TB.SelectedIndex = 2;
 
         }
 
         private void Pinn_Click(object sender, RoutedEventArgs e)
         {
-            RewardInfo_TB.SelectedIndex = 2;
+            RewardInfo_TB.SelectedIndex = 3;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void BackSoft_Click(object sender, RoutedEventArgs e)
+        {
+            RewardInfo_TB.SelectedIndex = 0;
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
         {
 
         }
