@@ -23,7 +23,9 @@ namespace Destiny2PowerLevelMax
         public MainWindow()
         {
             InitializeComponent();
-            clear();        
+            clear();
+            val();
+            
         }
 
         #region Misc Methods 
