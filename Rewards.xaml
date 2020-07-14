@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
         <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
-        <TabControl x:Name="RewardInfo_TB" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="283" Margin="100,81,0,0" VerticalAlignment="Top" Width="607">
+        <TabControl x:Name="RewardInfo_TB" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Height="316" Margin="100,81,0,0" VerticalAlignment="Top" Width="607">
             <TabItem x:Name="Info_Header" Header="Info">
                 <Grid Background="Transparent">
 
@@ -35,25 +35,32 @@
             </TabItem>
             <TabItem x:Name="SoftCap_Header" Header="SoftCap">
 
-                <Grid Background="Transparent">
+                <Grid Background="Transparent" Margin="0,0,0,-30">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="34*"/>
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="165*"/>
-                    </Grid.ColumnDefinitions>
 
-                    <Button x:Name="BackSoft" Background="Transparent" BorderThickness="0" Content="Back" HorizontalAlignment="Left" Margin="395.25,215,0,0" Click="BackSoft_Click"  VerticalAlignment="Top" Width="100" Height="42" Grid.Column="2"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="softinfoTB" Height="215" Margin="10,10,19,0" TextWrapping="Wrap" Text="Current Soft Cap&#xA;- World Drops &#xD;&#xA;- Engrams &#xD;&#xA;- Vendors (Tokens Vanguard, Cruicble) (Gunsmith For Weapons) &#xD;&#xA;- Activity Completion &#xD;&#xA;- Matchmade Activity&#xD;&#xA;- Year 1 and 2 Raids however removing in September &#xD;&#xA;- Shattered Throne &#xD;&#xA;- Public Events " VerticalAlignment="Top" TextChanged="TextBox_TextChanged_1" Grid.ColumnSpan="3"/>
+                    <Button x:Name="BackSoft" Background="Transparent" BorderThickness="0" Content="Back" HorizontalAlignment="Left" Margin="376,235,0,0" Click="BackSoft_Click"  VerticalAlignment="Top" Width="100" Height="28" Grid.Column="2"/>
                 </Grid>
 
             </TabItem>
             <TabItem x:Name="PowerCap_Header" Header="Powerful Cap">
                 <Grid Background="Transparent">
-                    <Button x:Name="BackPower" Background="Transparent" BorderThickness="0" Content="Soft Cap" HorizontalAlignment="Left" Margin="493,205,0,0" Click="BackSoft_Click" VerticalAlignment="Top" Width="100" Height="42"/>
+                    <TextBox Name="PowerinfoTB" Height="215" Margin="10,10,19,0" TextWrapping="Wrap" Text="Powerful Cap (Weekly Completion)  &#xD;&#xA;- Flashpoint &#xD;&#xA;- Nightmare Hunts &#xD;&#xA;- Nightfall - Three Ordeal Completions &#xD;&#xA;- Eight Bounties ( Strikes , Gambit , Crucible ) &#xD;&#xA;- Prime Engrams &#xD;&#xA;- Crucible valor and Gambit infamy rank-ups &#xD;&#xA;- Crucible glory&#xD;&#xA;- Lunar Recall weekly mission on the Moon&#xD;&#xA;- Luna's Calling weekly quest from Eris Morn&#xD;&#xA;- Hawthorne's weekly clan exp reward&#xD;&#xA;- Pit of Heresy dungeon – The Necropolis and Chamber of Suffering encounters net you powerful drops.&#xD;&#xA;The Prophecy dungeon – The first two encounters (Phalanx Echo and Hexahedron) provide powerful gear." VerticalAlignment="Top" TextChanged="TextBox_TextChanged_1" Grid.ColumnSpan="3"/>
+                    <Button x:Name="BackPower" Background="Transparent" BorderThickness="0" Content="Back" HorizontalAlignment="Left" Margin="484,238,0,0" Click="BackSoft_Click" VerticalAlignment="Top" Width="100" Height="42"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="PinnCap_Header" Header="Pinnacle Cap">
-                <Grid Background="Transparent">
-                    <Button x:Name="Back" Background="Transparent" BorderThickness="0" Content="Back" HorizontalAlignment="Left" Margin="493,205,0,0" Click="BackSoft_Click" VerticalAlignment="Top" Width="100" Height="42"/>
+                <Grid Background="Transparent" Margin="0,0,0,-18">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="145*"/>
+                        <ColumnDefinition Width="458*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Name="PinninfoTB" Height="249" Margin="10,10,19,0" TextWrapping="Wrap" Text="+1 &#xD;&#xA;- 3 Strikes &#xD;&#xA;- 3 Gambit Matches&#xD;&#xA;- 4 Crucible Matches &#xD;&#xA;- Clan Engram &#xD;&#xA;&#xD;&#xA;+2&#xD;&#xA;Pit of Heresy Boss Kill ( Armour Piece ) &#xD;&#xA;Garden of Salvation (+2 Per Encounter ) &#xD;&#xA;100k Nightfall &#xD;&#xA;1080 Nightmare Hunt &#xD;&#xA;Iron Banner Bounties &#xD;&#xA;7th Trials Win and Flawless &#xD;&#xA;Interference Weekly Quest &#xD;&#xA;Prophecy Dungeon Boss Kill " VerticalAlignment="Top" TextChanged="TextBox_TextChanged_1" Grid.ColumnSpan="2"/>
+                    <Button x:Name="Back" Background="Transparent" BorderThickness="0" Content="Back" HorizontalAlignment="Left" Margin="348,272,0,0" Click="BackSoft_Click" VerticalAlignment="Top" Width="100" Height="26" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>
