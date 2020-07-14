@@ -9,7 +9,9 @@ namespace Destiny2PowerLevelMax
 {
     public class PowerSum : INotifyPropertyChanged
     {
-
+        /// <summary>
+        /// Work In Progress Class Using Property Changed 
+        /// </summary>
         private string val_helmet;
         private string val_arms;
         private string val_chest;
@@ -18,7 +20,7 @@ namespace Destiny2PowerLevelMax
         private string val_prim;
         private string val_secondary ;
         private string val_power;
-        private string val_result;
+        private string result; 
 
         public string Val_Helmet
         {
@@ -28,7 +30,7 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_helmet = value;
-                OnPropertyChanged("Hel"); //Change to Correct Box 
+                OnPropertyChanged("HelBox");
                 OnPropertyChanged("Result"); //Change to Correct Box 
             }
         }
@@ -40,108 +42,107 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_arms = value;
-                OnPropertyChanged("Arms"); //Change to Correct Box 
+                OnPropertyChanged("ArmsBox"); 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_chest 
+        public string Val_Chest 
         {
             get { return val_chest; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("Chest");//Change to Correct Box 
+                if (res) val_chest = value;
+                OnPropertyChanged("ChestBox");//Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_legs
+        public string Val_Legs
         {
             get { return val_legs; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("legs"); //Change to Correct Box 
+                if (res) val_legs = value;
+                OnPropertyChanged("LegsBox"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_class
+        public string Val_Class
         {
             get { return val_class; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("Class"); //Change to Correct Box 
+                if (res) val_class = value;
+                OnPropertyChanged("ClassBox"); 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_prim
+        public string Val_Prim
         {
             get { return val_prim; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("Prim"); //Change to Correct Box 
+                if (res) val_prim = value;
+                OnPropertyChanged("PrimBox"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_secondary
+        public string Val_Secondary
         {
             get { return val_secondary; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("secondary"); //Change to Correct Box 
+                if (res) val_secondary = value;
+                OnPropertyChanged("SecBox"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_power
+        public string Val_Power
         {
             get { return val_power; }
             set
             {
                 double number;
                 bool res = double.TryParse(value, out number);
-                if (res) val_arms = value;
-                OnPropertyChanged("power"); //Change to Correct Box 
+                if (res) val_power = value;
+                OnPropertyChanged("PowerBox"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
 
 
 
-        /*
+        
         public string Result
         {
             get
             {
-                double cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
+                double cal = double.Parse(Val_Helmet) + double.Parse(Val_Arms) + double.Parse(Val_Chest) + double.Parse(Val_Legs) + double.Parse(Val_Class) + double.Parse(Val_Prim) + double.Parse(Val_Secondary) + double.Parse(Val_Power);
                 double PlValue = cal / 8;
-                return res.ToString();
+                return PlValue.ToString();
             }
             set
             {
-                double cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
-                double PlValue = cal / 8;
-                int res = int.Parse(Num1) + int.Parse(Num2);
-                result = res.ToString();
+                double cal = double.Parse(Val_Helmet) + double.Parse(Val_Arms) + double.Parse(Val_Chest) + double.Parse(Val_Legs) + double.Parse(Val_Class) + double.Parse(Val_Prim) + double.Parse(Val_Secondary) + double.Parse(Val_Power);
+                double PlValue = cal / 8;               
+                result = PlValue.ToString();
                 OnPropertyChanged("Result");
             }
 
         }
-        */
+        
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string property)

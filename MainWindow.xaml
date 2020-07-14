@@ -18,28 +18,28 @@
 
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <TextBox x:Name="Helment_tb" HorizontalAlignment="Left" Height="23" Margin="535,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Helment_tb" HorizontalAlignment="Left" Height="23" Margin="535,58,0,0" TextWrapping="Wrap" Text="{Binding Path=HelBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Helmet_lb" Content="Helment" HorizontalAlignment="Left" Margin="532,28,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Arms_tb" HorizontalAlignment="Left" Height="23" Margin="535,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Arms_tb" HorizontalAlignment="Left" Height="23" Margin="535,117,0,0" TextWrapping="Wrap" Text="{Binding Path=ArmsBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Arms_lb" Content="Arms" HorizontalAlignment="Left" Margin="532,86,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Chest_tb" HorizontalAlignment="Left" Height="23" Margin="535,176,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Chest_tb" HorizontalAlignment="Left" Height="23" Margin="535,176,0,0" TextWrapping="Wrap" Text="{Binding Path=ChestBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Chest_lb" Content="Chest" HorizontalAlignment="Left" Margin="535,150,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Legs_tb" HorizontalAlignment="Left" Height="23" Margin="535,235,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Legs_tb" HorizontalAlignment="Left" Height="23" Margin="535,235,0,0" TextWrapping="Wrap" Text="{Binding Path=LegsBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Legs_lb" Content="Legs" HorizontalAlignment="Left" Margin="535,204,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Class_tb" HorizontalAlignment="Left" Height="23" Margin="535,302,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Class_tb" HorizontalAlignment="Left" Height="23" Margin="535,302,0,0" TextWrapping="Wrap" Text="{Binding Path=ClassBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Class_lb" Content="Class" HorizontalAlignment="Left" Margin="536,271,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Prim_tb" HorizontalAlignment="Left" Height="23" Margin="143,58,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Prim_tb" HorizontalAlignment="Left" Height="23" Margin="143,58,0,0" TextWrapping="Wrap" Text="{Binding Path=PrimBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Prim_lb" Content="Primary Weapon" HorizontalAlignment="Left" Margin="143,27,0,0" VerticalAlignment="Top"/>
 
-        <TextBox x:Name="Sec_tb" HorizontalAlignment="Left" Height="23" Margin="143,117,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Sec_tb" HorizontalAlignment="Left" Height="23" Margin="143,117,0,0" TextWrapping="Wrap" Text="{Binding Path=SecBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Sec_lb" Content="Secondary Weapon" HorizontalAlignment="Left" Margin="143,86,0,0" VerticalAlignment="Top"/>
-
-        <TextBox x:Name="Power_tb" HorizontalAlignment="Left" Height="23" Margin="143,181,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        
+        <TextBox x:Name="Power_tb" HorizontalAlignment="Left" Height="23" Margin="143,181,0,0" TextWrapping="Wrap" Text="{Binding Path=PowerBox,Mode=TwoWay}" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Power_lb" Content="Power Weapon" HorizontalAlignment="Left" Margin="143,150,0,0" VerticalAlignment="Top"/>
         <Button x:Name="Calculate" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="355,276,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="82" Height="47">
             <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
