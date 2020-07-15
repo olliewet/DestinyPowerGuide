@@ -12,6 +12,9 @@ namespace Destiny2PowerLevelMax
         /// <summary>
         /// Work In Progress Class Using Property Changed 
         /// </summary>
+        
+
+        ///Declaring Variables to be used in Properties
         private string val_helmet;
         private string val_arms;
         private string val_chest;
@@ -22,7 +25,9 @@ namespace Destiny2PowerLevelMax
         private string val_power;
         private string result; 
 
-        public string Val_Helmet
+
+       
+        public string Helmet
         {
             get { return val_helmet; }
             set
@@ -30,11 +35,11 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_helmet = value;
-                OnPropertyChanged("HelBox");
+                OnPropertyChanged("Helmet");
                 OnPropertyChanged("Result"); //Change to Correct Box 
             }
         }
-        public string Val_Arms
+        public string Arms
         {
             get { return val_arms; }
             set
@@ -42,11 +47,11 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_arms = value;
-                OnPropertyChanged("ArmsBox"); 
+                OnPropertyChanged("Arms"); 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_Chest 
+        public string Chest 
         {
             get { return val_chest; }
             set
@@ -54,11 +59,11 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_chest = value;
-                OnPropertyChanged("ChestBox");//Change to Correct Box 
+                OnPropertyChanged("Chest");//Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_Legs
+        public string Legs
         {
             get { return val_legs; }
             set
@@ -66,11 +71,11 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_legs = value;
-                OnPropertyChanged("LegsBox"); //Change to Correct Box 
+                OnPropertyChanged("Legs"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
-        public string Val_Class
+        public string Class
         {
             get { return val_class; }
             set
@@ -78,12 +83,12 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_class = value;
-                OnPropertyChanged("ClassBox"); 
+                OnPropertyChanged("Class"); 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_Prim
+        public string Prim
         {
             get { return val_prim; }
             set
@@ -91,12 +96,12 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_prim = value;
-                OnPropertyChanged("PrimBox"); //Change to Correct Box 
+                OnPropertyChanged("Prim"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_Secondary
+        public string Sec
         {
             get { return val_secondary; }
             set
@@ -104,12 +109,12 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_secondary = value;
-                OnPropertyChanged("SecBox"); //Change to Correct Box 
+                OnPropertyChanged("Sec"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
 
-        public string Val_Power
+        public string Power
         {
             get { return val_power; }
             set
@@ -117,7 +122,7 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_power = value;
-                OnPropertyChanged("PowerBox"); //Change to Correct Box 
+                OnPropertyChanged("Power"); //Change to Correct Box 
                 OnPropertyChanged("Result");
             }
         }
@@ -129,13 +134,13 @@ namespace Destiny2PowerLevelMax
         {
             get
             {
-                double cal = double.Parse(Val_Helmet) + double.Parse(Val_Arms) + double.Parse(Val_Chest) + double.Parse(Val_Legs) + double.Parse(Val_Class) + double.Parse(Val_Prim) + double.Parse(Val_Secondary) + double.Parse(Val_Power);
+                double cal = double.Parse(Helmet) + double.Parse(Arms) + double.Parse(Chest) + double.Parse(Legs) + double.Parse(Class) + double.Parse(Prim) + double.Parse(Sec) + double.Parse(Power);
                 double PlValue = cal / 8;
                 return PlValue.ToString();
             }
             set
             {
-                double cal = double.Parse(Val_Helmet) + double.Parse(Val_Arms) + double.Parse(Val_Chest) + double.Parse(Val_Legs) + double.Parse(Val_Class) + double.Parse(Val_Prim) + double.Parse(Val_Secondary) + double.Parse(Val_Power);
+                double cal = double.Parse(Helmet) + double.Parse(Arms) + double.Parse(Chest) + double.Parse(Legs) + double.Parse(Class) + double.Parse(Prim) + double.Parse(Sec) + double.Parse(Power);
                 double PlValue = cal / 8;               
                 result = PlValue.ToString();
                 OnPropertyChanged("Result");

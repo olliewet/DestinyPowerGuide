@@ -24,8 +24,8 @@ namespace Destiny2PowerLevelMax
         public MainWindow()
         {
             InitializeComponent();
-            sum = new PowerSum { Val_Arms = "1002", Val_Chest = "1000", Val_Class = "1000", Val_Helmet = "1000", Val_Legs = "1000", Val_Power = "1000", Val_Prim = "1000", Val_Secondary = "1000" };
-            this.DataContext = sum;
+           sum = new PowerSum { Helmet = "1002", Arms = "1000", Class = "1000", Chest = "1000", Legs = "1000", Power = "1000", Prim = "1000", Sec = "1000" };
+           this.DataContext = sum;
             //clear();
             //val();
             
