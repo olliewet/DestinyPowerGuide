@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -36,7 +37,7 @@ namespace Destiny2PowerLevelMax
                 bool res = double.TryParse(value, out number);
                 if (res) val_helmet = value;
                 OnPropertyChanged("Helmet");
-                OnPropertyChanged("Result"); //Change to Correct Box 
+                OnPropertyChanged("Result"); 
             }
         }
         public string Arms
@@ -59,7 +60,7 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_chest = value;
-                OnPropertyChanged("Chest");//Change to Correct Box 
+                OnPropertyChanged("Chest");
                 OnPropertyChanged("Result");
             }
         }
@@ -71,7 +72,7 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_legs = value;
-                OnPropertyChanged("Legs"); //Change to Correct Box 
+                OnPropertyChanged("Legs"); 
                 OnPropertyChanged("Result");
             }
         }
@@ -136,18 +137,26 @@ namespace Destiny2PowerLevelMax
             {
                 double cal = double.Parse(Helmet) + double.Parse(Arms) + double.Parse(Chest) + double.Parse(Legs) + double.Parse(Class) + double.Parse(Prim) + double.Parse(Sec) + double.Parse(Power);
                 double PlValue = cal / 8;
+                double plRoundUp = Math.Round(PlValue, 1);
+                double plRoundDown = Math.Floor(PlValue);
+                double _basePl = Math.Ceiling(PlValue);
+                              
                 return PlValue.ToString();
             }
             set
             {
                 double cal = double.Parse(Helmet) + double.Parse(Arms) + double.Parse(Chest) + double.Parse(Legs) + double.Parse(Class) + double.Parse(Prim) + double.Parse(Sec) + double.Parse(Power);
-                double PlValue = cal / 8;               
+                double PlValue = cal / 8;
+                double plRoundUp = Math.Round(PlValue, 1);
+                double plRoundDown = Math.Floor(PlValue);
+                double _basePl = Math.Ceiling(PlValue);           
                 result = PlValue.ToString();
+                OnPropertyChanged("IncreaseValue");
                 OnPropertyChanged("Result");
             }
-
         }
-        
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string property)

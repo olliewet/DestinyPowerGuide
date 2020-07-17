@@ -49,9 +49,9 @@
 
 
 
-        <Label  x:Name="powertext"  Content="" HorizontalAlignment="Left" Margin="355,220,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="160"/>
+        <Label  x:Name="powertext"  Content="{Binding Path=Result,Mode=TwoWay}" HorizontalAlignment="Left" Margin="304,220,0,0" VerticalAlignment="Top" FontFamily="Arial Black" FontSize="36" Width="211"/>
         <Label  x:Name="NextIncrease" Foreground="Black" Content="For Next Power Level Increase any Armour By" HorizontalAlignment="Left" Margin="267,323,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="14" Grid.RowSpan="2"/>
-        <Label  x:Name="IncreaseVal"  Foreground="Black" Content="0" HorizontalAlignment="Left" Margin="392,10,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Height="27" Grid.Row="1"/>
+        <Label  x:Name="IncreaseVal" x:FieldModifier="public" Foreground="Black" Content="" HorizontalAlignment="Left" Margin="355,18,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="16" Height="20" Width="87" Grid.Row="1"/>
         <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="282,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="233"/>
         <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="282,64,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="233" Grid.Row="1"/>
         <Grid Background="Transparent" Margin="0,0,663,0" Grid.RowSpan="2">
@@ -64,7 +64,7 @@
             </Button>
             <Label Content="Useful Links" HorizontalAlignment="Left" Margin="27,296,0,0" VerticalAlignment="Top"/>
             <Label x:Name="PowerIndicator"  Content="Currently on:" HorizontalAlignment="Left" Margin="265,360,-231,0" VerticalAlignment="Top" Width="95"/>
-            <Label x:Name="TypeOfGrind"  Content="" HorizontalAlignment="Left" Margin="360,360,-385,0" VerticalAlignment="Top" Width="154"/>
+            <Label x:Name="TypeOfGrind"  Content="" HorizontalAlignment="Left" Margin="345,368,-370,0" VerticalAlignment="Top" Width="154" Height="18"/>
             <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Values" HorizontalAlignment="Left" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
             <Button x:Name="Rewards" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="0,42,0,0" Click="Rewards_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
             <Button x:Name="Prep" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="0,84,0,0" Click="Prep_Click"  VerticalAlignment="Top" Width="129" Height="42"/>

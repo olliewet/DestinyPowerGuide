@@ -110,6 +110,8 @@ namespace Destiny2PowerLevelMax
                 Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
                 colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
                 PowerMethod(plRoundUp);
+
+                //Progress Bar
                 pb_power.Visibility = Visibility.Visible;
                 pb_power.Minimum = plRoundDown;
                 pb_power.Maximum = _basePl;
