@@ -17,6 +17,12 @@
             <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
         </Button>
         <ListBox x:Name="ToDoBox" HorizontalAlignment="Left" Height="266" Margin="504,76,0,0" VerticalAlignment="Top" Width="207"/>
-        <CheckBox x:Name="Pinn" Content="Pin" HorizontalAlignment="Left" Margin="21,115,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="FlashPoint_CB" Content="Weekly Flashpoint" HorizontalAlignment="Left" Margin="21,115,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Nmh_CB" Content="Nightmare Hunt" HorizontalAlignment="Left" Margin="21,135,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="Nightfall_CB" Content="Nightfall Ordeal" HorizontalAlignment="Left" Margin="21,155,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="StrikesBounties_CB" Content="Strike Bounties" HorizontalAlignment="Left" Margin="21,175,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="CrucibleBounties_CB" Content="Crucible Bounties" HorizontalAlignment="Left" Margin="21,195,0,0" VerticalAlignment="Top"/>
+        <CheckBox x:Name="GambitBounties_CB" Content="Gambit Bounties" HorizontalAlignment="Left" Margin="21,215,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Powerful_lb" Content="Powerful Rewards" HorizontalAlignment="Left" Margin="21,84,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>
