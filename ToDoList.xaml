@@ -8,10 +8,11 @@
         mc:Ignorable="d"
         Left="500" Top="300"
         Title="ToDoList" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="ToGrid">
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
+
         <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
         <Button x:Name="Calculate" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="351,362,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="82" Height="47">
             <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
@@ -24,5 +25,6 @@
         <CheckBox x:Name="CrucibleBounties_CB" Content="Crucible Bounties" HorizontalAlignment="Left" Margin="21,195,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="GambitBounties_CB" Content="Gambit Bounties" HorizontalAlignment="Left" Margin="21,215,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Powerful_lb" Content="Powerful Rewards" HorizontalAlignment="Left" Margin="21,84,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="Time_lb" Content="" HorizontalAlignment="Left" Margin="504,347,0,0" VerticalAlignment="Top" Width="270" Height="54"/>
     </Grid>
 </Window>

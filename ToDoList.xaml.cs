@@ -33,9 +33,36 @@ namespace Destiny2PowerLevelMax
 
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
-            if(Pinn.IsChecked == true)
+            double timecounter = 0; 
+            if (FlashPoint_CB.IsChecked == true)
+                ToDoBox.Items.Add("Flash Point");
+            timecounter = timecounter + 10;
+            if (Nmh_CB.IsChecked == true)
+                ToDoBox.Items.Add("Nightmare Hunt");
+            timecounter = timecounter + 10;
+            if (Nightfall_CB.IsChecked == true)
+                ToDoBox.Items.Add("Nightfall");
+            timecounter = timecounter + 10;
+            if (StrikesBounties_CB.IsChecked == true)
+                ToDoBox.Items.Add("Strike Bounties");
+            timecounter = timecounter + 10;
+            if (CrucibleBounties_CB.IsChecked == true)
+                ToDoBox.Items.Add("Crucible Bounties");
+            timecounter = timecounter + 10;
+            if (GambitBounties_CB.IsChecked == true)
+                ToDoBox.Items.Add("Gambit Bounties");
+            timecounter = timecounter + 10;
+            SetCheckBoxToNull(ToGrid);
+            string time = timecounter.ToString();
+            Time_lb.Content = "Average Time to complete is " + time + "  mintues";
+        }
+
+        public void SetCheckBoxToNull(Grid gridName)
+        {
+            foreach (Control checkBox in gridName.Children)
             {
-                ToDoBox.Items.Add("Pinn");
+                if (checkBox.GetType() == typeof(CheckBox))
+                    ((CheckBox)checkBox).IsChecked = false;              
             }
         }
     }
