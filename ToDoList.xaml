@@ -1,0 +1,22 @@
+﻿<Window x:Class="Destiny2PowerLevelMax.ToDoList"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Destiny2PowerLevelMax"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        mc:Ignorable="d"
+        Left="500" Top="300"
+        Title="ToDoList" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+        <Button x:Name="Calculate" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="351,362,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="82" Height="47">
+            <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
+        </Button>
+        <ListBox x:Name="ToDoBox" HorizontalAlignment="Left" Height="266" Margin="504,76,0,0" VerticalAlignment="Top" Width="207"/>
+        <CheckBox x:Name="Pinn" Content="Pin" HorizontalAlignment="Left" Margin="21,115,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

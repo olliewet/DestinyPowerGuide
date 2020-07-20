@@ -11,7 +11,9 @@ namespace Destiny2PowerLevelMax
     public class PowerSum : INotifyPropertyChanged
     {
         /// <summary>
-        /// Work In Progress Class Using Property Changed 
+        /// Work In Progress Class Using Property Changed, 
+        /// 
+        /// Idea behind the class is to remove the need of the calculate button and have the value change whenever a user changes a value
         /// </summary>
         
 
@@ -97,7 +99,7 @@ namespace Destiny2PowerLevelMax
                 double number;
                 bool res = double.TryParse(value, out number);
                 if (res) val_prim = value;
-                OnPropertyChanged("Prim"); //Change to Correct Box 
+                OnPropertyChanged("Prim"); 
                 OnPropertyChanged("Result");
             }
         }

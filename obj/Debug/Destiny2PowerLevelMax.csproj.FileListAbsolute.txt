@@ -21,3 +21,5 @@ C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\D
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Rewards.baml
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Preparation.g.cs
 C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\Preparation.baml
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\ToDoList.g.cs
+C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\DestinyPowerGuide\obj\Debug\ToDoList.baml

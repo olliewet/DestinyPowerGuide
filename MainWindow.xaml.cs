@@ -24,10 +24,10 @@ namespace Destiny2PowerLevelMax
         public MainWindow()
         {
             InitializeComponent();
-           sum = new PowerSum { Helmet = "1002", Arms = "1000", Class = "1000", Chest = "1000", Legs = "1000", Power = "1000", Prim = "1000", Sec = "1000" };
-           this.DataContext = sum;
-            //clear();
-            //val();
+           //sum = new PowerSum { Helmet = "1002", Arms = "1000", Class = "1000", Chest = "1000", Legs = "1000", Power = "1000", Prim = "1000", Sec = "1000" };
+          // this.DataContext = sum;
+            clear();
+            val();
             
         }
 
@@ -263,5 +263,13 @@ namespace Destiny2PowerLevelMax
             Prep.Show();
         }
         #endregion
+   
+
+        private void ToDo_Click(object sender, RoutedEventArgs e)
+        {
+            var ToDo = new ToDoList();
+            this.Close();
+            ToDo.Show();
+        }
     }
 }
