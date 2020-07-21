@@ -24,6 +24,10 @@ namespace Destiny2PowerLevelMax
             InitializeComponent();
         }
 
+        #region Variables 
+        double timecounter = 0;
+        #endregion
+
         private void Home_Click(object sender, RoutedEventArgs e)
         {
             var home = new MainWindow();
@@ -31,27 +35,30 @@ namespace Destiny2PowerLevelMax
             home.Show();
         }
 
+        private void itemsInputChecker(ListBox listBox, CheckBox cb, string text, int duration)
+        {
+            if (cb.IsChecked == true && listBox.Items.Contains(text) == false)
+            {
+                ToDoBox.Items.Add(text);
+                timecounter = timecounter + duration;
+            }
+        }
+
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
-            double timecounter = 0; 
-            if (FlashPoint_CB.IsChecked == true)
-                ToDoBox.Items.Add("Flash Point");
-            timecounter = timecounter + 10;
-            if (Nmh_CB.IsChecked == true)
-                ToDoBox.Items.Add("Nightmare Hunt");
-            timecounter = timecounter + 10;
-            if (Nightfall_CB.IsChecked == true)
-                ToDoBox.Items.Add("Nightfall");
-            timecounter = timecounter + 10;
-            if (StrikesBounties_CB.IsChecked == true)
-                ToDoBox.Items.Add("Strike Bounties");
-            timecounter = timecounter + 10;
-            if (CrucibleBounties_CB.IsChecked == true)
-                ToDoBox.Items.Add("Crucible Bounties");
-            timecounter = timecounter + 10;
-            if (GambitBounties_CB.IsChecked == true)
-                ToDoBox.Items.Add("Gambit Bounties");
-            timecounter = timecounter + 10;
+            itemsInputChecker(ToDoBox, FlashPoint_CB, "Flash Point", 10);
+            itemsInputChecker(ToDoBox, Nmh_CB, "Nightmare Hunt", 13);
+            itemsInputChecker(ToDoBox, Nightfall_CB, "Nightfall", 15);
+            itemsInputChecker(ToDoBox, StrikesBounties_CB, "Strike Bounties", 20);
+            itemsInputChecker(ToDoBox, CrucibleBounties_CB, "Crucible Bounties" , 20);
+            itemsInputChecker(ToDoBox, GambitBounties_CB, "Gambit Bounties" , 20);
+            itemsInputChecker(ToDoBox, strikes_CB, "3 Strike Completions", 10);
+            itemsInputChecker(ToDoBox, crucible_CB, "4 Crucible Matches ", 13);
+            itemsInputChecker(ToDoBox, gambit_CB, "3 Gambit Matches", 15);
+            itemsInputChecker(ToDoBox, Raid_Graden, "Garden of salvation", 60);
+            itemsInputChecker(ToDoBox, PitBoss_cb, "Pit Dungeon", 40);
+            itemsInputChecker(ToDoBox, clan_engram, "Gambit Bounties", 20);
+
             SetCheckBoxToNull(ToGrid);
             string time = timecounter.ToString();
             Time_lb.Content = "Average Time to complete is " + time + "  mintues";
