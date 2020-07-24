@@ -35,6 +35,13 @@ namespace Destiny2PowerLevelMax
             home.Show();
         }
 
+        /// <summary>
+        /// Used to Check if the item is checked is not already in the list it will be added too list
+        /// </summary>
+        /// <param name="listBox"></param>
+        /// <param name="cb"></param>
+        /// <param name="text"></param>
+        /// <param name="duration"></param>
         private void itemsInputChecker(ListBox listBox, CheckBox cb, string text, int duration)
         {
             if (cb.IsChecked == true && listBox.Items.Contains(text) == false)
@@ -44,6 +51,23 @@ namespace Destiny2PowerLevelMax
             }
         }
 
+        /// <summary>
+        /// Used to calculate the hours and seconds from Mintues 
+        /// </summary>
+        /// <param name="_time"></param>
+        private void getTime(double _time)
+        {
+            var totalMinutes = _time;
+            var time = TimeSpan.FromMinutes(totalMinutes);          
+            Time_lb.Content = ("Average amount of Time of Completion: " + "\n" + (int)time.TotalHours + " Hour And " + time.Minutes + " Mintues ");
+
+        }
+
+        /// <summary>
+        /// Used to Input Items to ListBox and Calculate Time 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Calculate_Click(object sender, RoutedEventArgs e)
         {
             itemsInputChecker(ToDoBox, FlashPoint_CB, "Flash Point", 10);
@@ -59,11 +83,14 @@ namespace Destiny2PowerLevelMax
             itemsInputChecker(ToDoBox, PitBoss_cb, "Pit Dungeon", 40);
             itemsInputChecker(ToDoBox, clan_engram, "Gambit Bounties", 20);
 
-            SetCheckBoxToNull(ToGrid);
-            string time = timecounter.ToString();
-            Time_lb.Content = "Average Time to complete is " + time + "  mintues";
+            SetCheckBoxToNull(ToGrid);           
+            getTime(timecounter);
         }
 
+        /// <summary>
+        /// Used to Set all CheckBoxes to Null 
+        /// </summary>
+        /// <param name="gridName"></param>
         public void SetCheckBoxToNull(Grid gridName)
         {
             foreach (Control checkBox in gridName.Children)
@@ -72,5 +99,8 @@ namespace Destiny2PowerLevelMax
                     ((CheckBox)checkBox).IsChecked = false;              
             }
         }
+
+
+
     }
 }
