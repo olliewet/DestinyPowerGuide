@@ -6,12 +6,19 @@ indicator of what activities to complete next to maxmise my powerlevel.
 
 What this Project Currently Contains 
 -
-- Power Level Calculator 
+
+Power Level Calculator 
 - Progress Bar 
 - Shows What Items are Underleveled 
-- Shows how much power is required untill next level 
-- BareBones UI
+- Shows how much power is required untill next level
+- Simplistic and User Friendly UI 
 
+Rewards
+- What activities and events provide each type of gear 
+- Indication of power level caps 
+
+To Do List 
+- Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take to complete the chosen activitys
 
 Future Updates
 

@@ -42,6 +42,7 @@ namespace Destiny2PowerLevelMax
                 OnPropertyChanged("Result"); 
             }
         }
+
         public string Arms
         {
             get { return val_arms; }
@@ -54,6 +55,7 @@ namespace Destiny2PowerLevelMax
                 OnPropertyChanged("Result");
             }
         }
+
         public string Chest 
         {
             get { return val_chest; }
@@ -66,6 +68,7 @@ namespace Destiny2PowerLevelMax
                 OnPropertyChanged("Result");
             }
         }
+
         public string Legs
         {
             get { return val_legs; }
@@ -78,6 +81,7 @@ namespace Destiny2PowerLevelMax
                 OnPropertyChanged("Result");
             }
         }
+
         public string Class
         {
             get { return val_class; }
@@ -130,9 +134,7 @@ namespace Destiny2PowerLevelMax
             }
         }
 
-
-
-        
+       
         public string Result
         {
             get
@@ -157,8 +159,6 @@ namespace Destiny2PowerLevelMax
                 OnPropertyChanged("Result");
             }
         }
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void OnPropertyChanged(string property)
