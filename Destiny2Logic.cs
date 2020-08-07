@@ -52,16 +52,16 @@ namespace Destiny2PowerLevelMax
                         textBlock.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level, view rewards for detailed information on type of rewards";
                         break;
                     case 2:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Two Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 3:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Three Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 4:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Four Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 5:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Five Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 6:
                         textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
@@ -82,19 +82,19 @@ namespace Destiny2PowerLevelMax
                         textBlock.Text = "No Pieces are under Leveled, Suggested Route Pinnacles ";
                         break;
                     case 1:
-                        textBlock.Text = "One Piece is Under Leveled, Suggested Route Pinnacles or use tokens to get that one piece to the base level, view rewards for detailed information on type of rewards";
+                        textBlock.Text = "One Piece is Under Leveled, Suggested Route Powerfuls or use tokens to get that one piece to the base level, view rewards for detailed information on type of rewards";
                         break;
                     case 2:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Two Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 3:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Three Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 4:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Four Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 5:
-                        textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
+                        textBlock.Text = "Five Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";
                         break;
                     case 6:
                         textBlock.Text = "Six Piece is Under Leveled, Use Tokens to gather Pieces that drop at your base Power make sure to check on vendorengrams.xyz to see which vendors are dropping at base power";

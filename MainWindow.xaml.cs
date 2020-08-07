@@ -51,15 +51,15 @@ namespace Destiny2PowerLevelMax
         //Used as testing to automatically fill the boxes with values 
         private void val()
         {
-            Helment_tb.Text = "750";
-            Arms_tb.Text = "750";
-            Chest_tb.Text = "750";
-            Legs_tb.Text = "750";
-            Class_tb.Text = "750";
+            Helment_tb.Text = "1000";
+            Arms_tb.Text = "1000";
+            Chest_tb.Text = "1000";
+            Legs_tb.Text = "1000";
+            Class_tb.Text = "1000";
 
-            Prim_tb.Text = "750";
-            Sec_tb.Text = "750";
-            Power_tb.Text = "750";
+            Prim_tb.Text = "1000";
+            Sec_tb.Text = "1000";
+            Power_tb.Text = "1000";
         }
         private void PowerMethod(double power)
         {
@@ -104,11 +104,11 @@ namespace Destiny2PowerLevelMax
                 double plRoundDown = Math.Floor(PlValue);
                 double _basePl = Math.Ceiling(PlValue);
 
-
+                int counter = 0;
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
                 Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
-                colourchanger(hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
+                colourchanger(counter,hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
                 PowerMethod(plRoundUp);
 
                 //Progress Bar
@@ -116,7 +116,8 @@ namespace Destiny2PowerLevelMax
                 pb_power.Minimum = plRoundDown;
                 pb_power.Maximum = _basePl;
                 pb_power.Value = PlValue;
-               
+
+                
             }
             catch
             {
@@ -134,9 +135,8 @@ namespace Destiny2PowerLevelMax
 
         #region Functionality Methods 
         //Method for changing the colour of the text box depending on the gear score of the piece of armour 
-        private void colourchanger(double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
-        {          
-            int counter = 0;
+        private void colourchanger(int counter, double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
+        {                     
             double basedown = Math.Floor(_base);
             if( hel < basedown)
             {

@@ -97,7 +97,9 @@ namespace Destiny2PowerLevelMax
 
         public string Prim
         {
-            get { return val_prim; }
+            get { 
+                return val_prim; 
+            }
             set
             {
                 double number;
@@ -110,7 +112,9 @@ namespace Destiny2PowerLevelMax
 
         public string Sec
         {
-            get { return val_secondary; }
+            get {
+                return val_secondary; 
+            }
             set
             {
                 double number;
@@ -123,7 +127,9 @@ namespace Destiny2PowerLevelMax
 
         public string Power
         {
-            get { return val_power; }
+            get 
+            { return val_power; 
+            }
             set
             {
                 double number;
