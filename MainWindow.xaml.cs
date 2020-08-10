@@ -25,11 +25,12 @@ namespace Destiny2PowerLevelMax
         {
             InitializeComponent();
            //sum = new PowerSum { Helmet = "1002", Arms = "1000", Class = "1000", Chest = "1000", Legs = "1000", Power = "1000", Prim = "1000", Sec = "1000" };
-          // this.DataContext = sum;
+           //this.DataContext = sum;
             clear();
             val();
             
         }
+
 
         #region Misc Methods 
         //Used for clearing the textbox of text when application is opened
@@ -43,9 +44,7 @@ namespace Destiny2PowerLevelMax
 
             Prim_tb.Clear();
             Sec_tb.Clear();
-            Power_tb.Clear();
-            
-            
+            Power_tb.Clear();                     
         }
 
         //Used as testing to automatically fill the boxes with values 
@@ -56,7 +55,6 @@ namespace Destiny2PowerLevelMax
             Chest_tb.Text = "1000";
             Legs_tb.Text = "1000";
             Class_tb.Text = "1000";
-
             Prim_tb.Text = "1000";
             Sec_tb.Text = "1000";
             Power_tb.Text = "1000";
@@ -270,6 +268,11 @@ namespace Destiny2PowerLevelMax
             var ToDo = new ToDoList();
             this.Close();
             ToDo.Show();
+        }
+
+        private void CG_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1TM5B8R4xSlR-omci6kaSLJXz9qfqi5fo/edit");
         }
     }
 }

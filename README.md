@@ -17,6 +17,12 @@ Rewards
 - What activities and events provide each type of gear 
 - Indication of power level caps 
 
+Coming Soon 
+- Change Tabs of Main Page
+- Relocate or Redesign the currently on Section 
+- Add to Preparation Section
+- Create Home Logo
+
 To Do List 
 - Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take to complete the chosen activitys
 

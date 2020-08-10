@@ -64,7 +64,7 @@
             <Button x:Name="DestinyItem" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-4,368,0,0" Click="DestinyItem_Click" VerticalAlignment="Top" Width="133" Height="41">
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\DIM.png" />
             </Button>
-            <Label Content="Useful Links" HorizontalAlignment="Left" Margin="27,296,0,0" VerticalAlignment="Top"/>
+            <Label Content="Useful Links" HorizontalAlignment="Left" Margin="27,254,0,0" VerticalAlignment="Top"/>
             <Label x:Name="PowerIndicator"  Content="Currently on:" HorizontalAlignment="Left" Margin="549,345,-515,0" VerticalAlignment="Top" Width="95"/>
             <Label x:Name="TypeOfGrind"  Content="" HorizontalAlignment="Left" Margin="549,376,-574,0" VerticalAlignment="Top" Width="154" Height="33"/>
             <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Values" HorizontalAlignment="Left" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
@@ -72,6 +72,7 @@
             <Button x:Name="Prep" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="0,84,0,0" Click="Prep_Click"  VerticalAlignment="Top" Width="129" Height="42" />
             <Button x:Name="ToDo" Background="Transparent" BorderThickness="0" Content="To Do List" HorizontalAlignment="Left" Margin="0,126,0,0" Click="ToDo_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
             <Button x:Name="Help" Background="Transparent" BorderThickness="0" Content="Help" HorizontalAlignment="Left" Margin="0,168,0,0" Click="ToDo_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
+            <Button x:Name="CompleteGuide" Background="Transparent" BorderThickness="0" Content="Complete Guide" HorizontalAlignment="Left" Margin="2,280,0,0" Click="CG_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
 
         </Grid>
 
