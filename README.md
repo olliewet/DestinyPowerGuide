@@ -25,6 +25,7 @@ Coming Soon
 
 To Do List 
 - Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take to complete the chosen activitys
+- Update Main UI Page
 
 Future Updates
 
