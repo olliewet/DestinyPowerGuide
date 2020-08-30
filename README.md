@@ -23,12 +23,16 @@ Coming Soon
 - Add to Preparation Section
 - Create Home Logo
 
-To Do List 
-- Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take to complete the chosen activitys
-- Update Main UI Page
+Next Update 
+- New Revamp of the Current UI
+- New Home Screen 
+- New Section for Selecting Desired Feature 
+- Built in Guide/Help
+
+Bug Fix List 
+- Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take   to complete the chosen activitys
 
 Future Updates
-
 - Incorporate Bungie API 
 - Create a website using the Bungie API and to include all the current features but uses the gear of the current character 
 - Stunning UI 
