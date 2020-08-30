@@ -64,7 +64,6 @@
     <Compile Include="DestinyHomePage.xaml.cs">
       <DependentUpon>DestinyHomePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="PowerSum.cs" />
     <Compile Include="Preparation.xaml.cs">
       <DependentUpon>Preparation.xaml</DependentUpon>
     </Compile>

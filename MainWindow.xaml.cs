@@ -20,7 +20,7 @@ namespace Destiny2PowerLevelMax
     /// </summary>
     public partial class MainWindow : Window
     {
-        public PowerSum sum {get;set;} 
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -102,7 +102,9 @@ namespace Destiny2PowerLevelMax
                 double plRoundDown = Math.Floor(PlValue);
                 double _basePl = Math.Ceiling(PlValue);
 
+                //Counter Used Counting How Many Pieces are Underleveled
                 int counter = 0;
+
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
                 Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
@@ -110,12 +112,7 @@ namespace Destiny2PowerLevelMax
                 PowerMethod(plRoundUp);
 
                 //Progress Bar
-                pb_power.Visibility = Visibility.Visible;
-                pb_power.Minimum = plRoundDown;
-                pb_power.Maximum = _basePl;
-                pb_power.Value = PlValue;
-
-                
+                SettingProgressBar(plRoundDown, _basePl, PlValue);              
             }
             catch
             {
@@ -132,101 +129,56 @@ namespace Destiny2PowerLevelMax
         #endregion
 
         #region Functionality Methods 
-        //Method for changing the colour of the text box depending on the gear score of the piece of armour 
+        /// <summary>
+        /// Used to Determine if the item is below the power level of the user
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="basedown"></param>
+        /// <param name="counter"></param>
+        /// <param name="t"></param>
+        private void isItemLessThan(double item, double basedown, int counter, TextBox t)
+        {
+            if (item < basedown)
+            {
+                t.BorderBrush = System.Windows.Media.Brushes.Red;
+                counter++;
+            }
+            else
+            {
+                t.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+        }
+
+        /// <summary>
+        /// Method for changing the colour of the text box depending on the gear score of the piece of armour
+        /// </summary>
+        /// <param name="counter"></param>
+        /// <param name="hel"></param>
+        /// <param name="arms"></param>
+        /// <param name="chest"></param>
+        /// <param name="Class"></param>
+        /// <param name="Legs"></param>
+        /// <param name="Prim"></param>
+        /// <param name="secondary"></param>
+        /// <param name="Power"></param>
+        /// <param name="_base"></param>
+        /// <param name="mainpower"></param>
+
         private void colourchanger(int counter, double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
         {                     
             double basedown = Math.Floor(_base);
-            if( hel < basedown)
-            {
-                Helment_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-                counter++;
-            } 
-            else
-            {
-                Helment_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (arms < basedown)
-            {
-                counter++;
-                Arms_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {             
-                Arms_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (chest < basedown)
-            {
-                counter++;
-                Chest_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {
-                Chest_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (Class < basedown)
-            {
-                counter++;
-                Class_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {         
-                Class_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (Legs < basedown)
-            {
-                counter++;
-                Legs_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {               
-                Legs_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (Prim < basedown)
-            {
-                counter++;
-                Prim_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {
-                
-                Prim_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (secondary < basedown)
-            {
-                counter++;
-                Sec_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {
-                
-                Sec_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            if (Power < basedown)
-            {
-                counter++;
-                Power_tb.BorderBrush = System.Windows.Media.Brushes.Red;
-            }
-            else
-            {
-                Power_tb.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-
-            
+            isItemLessThan(hel, basedown, counter, Helment_tb);
+            isItemLessThan(arms, basedown, counter, Arms_tb);
+            isItemLessThan(chest, basedown, counter, Chest_tb);
+            isItemLessThan(Legs, basedown, counter, Legs_tb);
+            isItemLessThan(Class, basedown, counter, Class_tb);
+            isItemLessThan(Prim, basedown, counter, Prim_tb);
+            isItemLessThan(secondary, basedown, counter, Sec_tb);
+            isItemLessThan(Power, basedown, counter, Power_tb);        
             Destiny2Logic.SuggestedUpgrade(mainpower,counter, SuggestedRoute);
         }
        
-       
-        
-
-        
-       
+                       
         #endregion
 
         #region Links
@@ -263,6 +215,7 @@ namespace Destiny2PowerLevelMax
         #endregion
    
 
+
         private void ToDo_Click(object sender, RoutedEventArgs e)
         {
             var ToDo = new ToDoList();
@@ -273,6 +226,14 @@ namespace Destiny2PowerLevelMax
         private void CG_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://docs.google.com/document/d/1TM5B8R4xSlR-omci6kaSLJXz9qfqi5fo/edit");
+        }
+
+        private void SettingProgressBar(double plRoundDown, double _basePl, double PlValue)
+        {
+            pb_power.Visibility = Visibility.Visible;
+            pb_power.Minimum = plRoundDown;
+            pb_power.Maximum = _basePl;
+            pb_power.Value = PlValue;
         }
     }
 }
