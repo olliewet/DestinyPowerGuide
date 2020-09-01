@@ -7,9 +7,24 @@
         mc:Ignorable="d"
         Left="500" Top="300"
         ResizeMode="NoResize"
+       
         Title="DestinyHomePage" Height="450" Width="800">
     <Grid>
-        <Button x:Name="New_Button" Content="New Player" HorizontalAlignment="Left" Margin="171,213,0,0" VerticalAlignment="Top" Width="117" Click="New_Button_Click"/>
-        <Button x:Name="Exp_Button" Content="Expereinced Player" HorizontalAlignment="Left" Margin="516,213,0,0" VerticalAlignment="Top" Width="116" Click="Exp_Button_Click"/>
+
+        <Grid.Background>
+
+            <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="EXP" Margin="403,207,213,90" Background="Transparent" BorderThickness="0" Click="Button_Click">
+            <StackPanel>
+                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\expPlayer.png" Height="89" Width="146"/>
+            </StackPanel>
+        </Button>
+        <Button x:Name="NEW" Margin="220,207,396,90" Background="Transparent" BorderThickness="0" Click="Button_Click">
+            <StackPanel>
+                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\newPlayer.png" Height="89" Width="146"/>
+            </StackPanel>
+        </Button>
+        <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\D2.png" HorizontalAlignment="Left" Height="124" Margin="344,95,0,0" VerticalAlignment="Top" Width="136" />
     </Grid>
 </Window>

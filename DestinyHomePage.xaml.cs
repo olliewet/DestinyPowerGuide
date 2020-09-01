@@ -35,5 +35,12 @@ namespace Destiny2PowerLevelMax
             this.Close();
             Cal.Show();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var Cal = new MainWindow();
+            this.Close();
+            Cal.Show();
+        }
     }
 }
