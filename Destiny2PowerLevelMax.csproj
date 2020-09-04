@@ -64,6 +64,9 @@
     <Compile Include="DestinyHomePage.xaml.cs">
       <DependentUpon>DestinyHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="optionselection.xaml.cs">
+      <DependentUpon>optionselection.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Preparation.xaml.cs">
       <DependentUpon>Preparation.xaml</DependentUpon>
     </Compile>
@@ -90,6 +93,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="optionselection.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Preparation.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

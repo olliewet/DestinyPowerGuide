@@ -1,0 +1,21 @@
+﻿<Window x:Class="Destiny2PowerLevelMax.optionselection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Destiny2PowerLevelMax"
+        mc:Ignorable="d"
+        Left="500" Top="300"
+        ResizeMode="NoResize"     
+        Title="optionselection" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Button x:Name="Option1_btn" Background="Transparent" BorderThickness="0" Content="Power Calculator" HorizontalAlignment="Left" Margin="50,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option1_btn_Click"/>
+        <Button x:Name="Option2_btn" Background="Transparent" BorderThickness="0" Content="To Do List" HorizontalAlignment="Left" Margin="220,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option2_btn_Click"/>
+        <Button x:Name="Option3_btn" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="408,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option3_btn_Click"/>
+        <Button x:Name="Option4_btn" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="590,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option4_btn_Click"/>
+
+    </Grid>
+</Window>

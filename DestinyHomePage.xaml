@@ -15,16 +15,16 @@
 
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="EXP" Margin="403,207,213,90" Background="Transparent" BorderThickness="0" Click="Button_Click">
+        <Button x:Name="EXP" Margin="418,207,198,90" Background="Transparent" BorderThickness="0" Click="EXP_Click">
             <StackPanel>
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\expPlayer.png" Height="89" Width="146"/>
             </StackPanel>
         </Button>
-        <Button x:Name="NEW" Margin="220,207,396,90" Background="Transparent" BorderThickness="0" Click="Button_Click">
+        <Button x:Name="NEW" Margin="227,207,389,90" Background="Transparent" BorderThickness="0" Click="Button_Click">
             <StackPanel>
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\newPlayer.png" Height="89" Width="146"/>
             </StackPanel>
         </Button>
-        <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\D2.png" HorizontalAlignment="Left" Height="124" Margin="344,95,0,0" VerticalAlignment="Top" Width="136" />
+        <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\D2.png" HorizontalAlignment="Left" Height="124" Margin="341,78,0,0" VerticalAlignment="Top" Width="136" />
     </Grid>
 </Window>

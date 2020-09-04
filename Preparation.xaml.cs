@@ -26,7 +26,7 @@ namespace Destiny2PowerLevelMax
 
         private void Home_Click(object sender, RoutedEventArgs e)
         {
-            var home = new MainWindow();
+            var home = new optionselection();
             this.Close();
             home.Show();
         }

@@ -24,10 +24,7 @@ namespace Destiny2PowerLevelMax
             InitializeComponent();
         }
 
-        private void New_Button_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
         private void Exp_Button_Click(object sender, RoutedEventArgs e)
         {
@@ -38,9 +35,14 @@ namespace Destiny2PowerLevelMax
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var Cal = new MainWindow();
+
+        }
+
+        private void EXP_Click(object sender, RoutedEventArgs e)
+        {
+            var optionslection = new optionselection();
             this.Close();
-            Cal.Show();
+            optionslection.Show();
         }
     }
 }
