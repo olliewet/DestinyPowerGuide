@@ -13,6 +13,10 @@ Power Level Calculator
 - Shows how much power is required untill next level
 - Simplistic and User Friendly UI 
 
+Just been added 
+- New Home Screen 
+- New option Selection Screen
+
 Rewards
 - What activities and events provide each type of gear 
 - Indication of power level caps 
@@ -25,7 +29,6 @@ Coming Soon
 
 Next Update Front-End
 - New Revamp of the Current UI
-- New Home Screen 
 - New Section for Selecting Desired Feature 
 - Built in Guide/Help
 
