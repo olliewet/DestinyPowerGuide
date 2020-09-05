@@ -83,18 +83,19 @@ namespace Destiny2PowerLevelMax
         {
             try
             {
+                Armour newset = new Armour();
+                newset.Helmet = double.Parse(Helment_tb.Text);
+                newset.Arms = double.Parse(Arms_tb.Text);
+                newset.Chest = double.Parse(Chest_tb.Text);
+                newset.Legs = double.Parse(Legs_tb.Text);
+                newset.Class = double.Parse(Class_tb.Text);
+                newset.Primary = double.Parse(Prim_tb.Text);
+                newset.Secondary = double.Parse(Sec_tb.Text);
+                newset.Power = double.Parse(Power_tb.Text);
                 //Storing The Levels From the input into appropriate variables
-                double hel = double.Parse(Helment_tb.Text);
-                double arms = double.Parse(Arms_tb.Text);
-                double Chest = double.Parse(Chest_tb.Text);
-                double Class = double.Parse(Class_tb.Text);
-                double Legs = double.Parse(Legs_tb.Text);
-                double Prim = double.Parse(Prim_tb.Text);
-                double Secondary = double.Parse(Sec_tb.Text);
-                double Power = double.Parse(Power_tb.Text);
 
                 //Calculation to Find out the average Power Level of The User
-                double cal = hel + arms + Chest + Class + Legs + Prim + Secondary + Power;
+                double cal = newset.cal();
                 double PlValue = cal / 8;
 
                 //Rounding up the Power Level, Rounding Down the PowerLevel
@@ -107,8 +108,9 @@ namespace Destiny2PowerLevelMax
 
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
-                Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);             
-                colourchanger(counter,hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
+                Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);
+                colourchanger(counter, newset.Helmet , newset.Arms , newset.Chest , newset.Class , newset.Legs , newset.Primary , newset.Secondary , newset.Power, PlValue, plRoundUp);
+                //colourchanger(counter,hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
                 PowerMethod(plRoundUp);
 
                 //Progress Bar
