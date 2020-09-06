@@ -24,16 +24,15 @@ namespace Destiny2PowerLevelMax
         public MainWindow()
         {
             InitializeComponent();
-           //sum = new PowerSum { Helmet = "1002", Arms = "1000", Class = "1000", Chest = "1000", Legs = "1000", Power = "1000", Prim = "1000", Sec = "1000" };
-           //this.DataContext = sum;
             clear();
-            val();
-            
+            val();           
         }
 
 
         #region Misc Methods 
-        //Used for clearing the textbox of text when application is opened
+        /// <summary>
+        /// Used for clearing the textbox of text when application is opened
+        /// </summary>
         private void clear()
         {
             Helment_tb.Clear();
@@ -47,7 +46,9 @@ namespace Destiny2PowerLevelMax
             Power_tb.Clear();                     
         }
 
-        //Used as testing to automatically fill the boxes with values 
+        /// <summary>
+        /// Automatically fill the boxes with default Values 
+        /// </summary>
         private void val()
         {
             Helment_tb.Text = "1000";
@@ -59,6 +60,11 @@ namespace Destiny2PowerLevelMax
             Sec_tb.Text = "1000";
             Power_tb.Text = "1000";
         }
+
+        /// <summary>
+        /// Used to Check which Type of Content to display to the user
+        /// </summary>
+        /// <param name="power"></param>
         private void PowerMethod(double power)
         {
             if (power < 1000)
@@ -74,7 +80,6 @@ namespace Destiny2PowerLevelMax
                 TypeOfGrind.Content = "Pinnacle Grind";
             }
         }
-
         #endregion
 
         #region Buttons 
@@ -83,6 +88,7 @@ namespace Destiny2PowerLevelMax
         {
             try
             {
+                //Storing The Levels From the input into appropriate variables
                 Armour newset = new Armour();
                 newset.Helmet = double.Parse(Helment_tb.Text);
                 newset.Arms = double.Parse(Arms_tb.Text);
@@ -92,8 +98,7 @@ namespace Destiny2PowerLevelMax
                 newset.Primary = double.Parse(Prim_tb.Text);
                 newset.Secondary = double.Parse(Sec_tb.Text);
                 newset.Power = double.Parse(Power_tb.Text);
-                //Storing The Levels From the input into appropriate variables
-
+                
                 //Calculation to Find out the average Power Level of The User
                 double cal = newset.cal();
                 double PlValue = cal / 8;
@@ -109,8 +114,7 @@ namespace Destiny2PowerLevelMax
                 //Displaying The Power Level Code
                 powertext.Content = plRoundUp.ToString();
                 Destiny2Logic.avg(_basePl, plRoundUp, IncreaseVal);
-                colourchanger(counter, newset.Helmet , newset.Arms , newset.Chest , newset.Class , newset.Legs , newset.Primary , newset.Secondary , newset.Power, PlValue, plRoundUp);
-                //colourchanger(counter,hel,arms,Chest,Class,Legs,Prim,Secondary,Power,PlValue,plRoundUp);
+                colourchanger(counter, newset.Helmet , newset.Arms , newset.Chest , newset.Class , newset.Legs , newset.Primary , newset.Secondary , newset.Power, PlValue, plRoundUp);               
                 PowerMethod(plRoundUp);
 
                 //Progress Bar
@@ -122,12 +126,28 @@ namespace Destiny2PowerLevelMax
                 MessageBox.Show("Please Enter Valid Gear Scores Within the Provided Boxes");
             }
         }
-        //Button click that calls the value fill method, that fills the text boxes with values
+
+        /// <summary>
+        /// Button, Which Calls the Method that fills the values of the input boxes
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Fill_Values_Click(object sender, RoutedEventArgs e)
         {
             val();
         }
 
+        /// <summary>
+        /// Calling new Instance of ToDoList
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToDo_Click(object sender, RoutedEventArgs e)
+        {
+            var ToDo = new ToDoList();
+            this.Close();
+            ToDo.Show();
+        }
         #endregion
 
         #region Functionality Methods 
@@ -165,7 +185,6 @@ namespace Destiny2PowerLevelMax
         /// <param name="Power"></param>
         /// <param name="_base"></param>
         /// <param name="mainpower"></param>
-
         private void colourchanger(int counter, double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
         {                     
             double basedown = Math.Floor(_base);
@@ -179,8 +198,20 @@ namespace Destiny2PowerLevelMax
             isItemLessThan(Power, basedown, counter, Power_tb);        
             Destiny2Logic.SuggestedUpgrade(mainpower,counter, SuggestedRoute);
         }
-       
-                       
+
+        /// <summary>
+        /// Method use for Setting the progress on the progress Bars, depending on the values provided
+        /// </summary>
+        /// <param name="plRoundDown"></param>
+        /// <param name="_basePl"></param>
+        /// <param name="PlValue"></param>
+        private void SettingProgressBar(double plRoundDown, double _basePl, double PlValue)
+        {
+            pb_power.Visibility = Visibility.Visible;
+            pb_power.Minimum = plRoundDown;
+            pb_power.Maximum = _basePl;
+            pb_power.Value = PlValue;
+        }
         #endregion
 
         #region Links
@@ -197,6 +228,10 @@ namespace Destiny2PowerLevelMax
         private void DestinyItem_Click(object sender, RoutedEventArgs e)
         {
             System.Diagnostics.Process.Start("https://destinyitemmanager.com/");
+        }
+        private void CG_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1TM5B8R4xSlR-omci6kaSLJXz9qfqi5fo/edit");
         }
         #endregion
 
@@ -215,27 +250,12 @@ namespace Destiny2PowerLevelMax
             Prep.Show();
         }
         #endregion
-   
+
+        
 
 
-        private void ToDo_Click(object sender, RoutedEventArgs e)
-        {
-            var ToDo = new ToDoList();
-            this.Close();
-            ToDo.Show();
-        }
 
-        private void CG_Click(object sender, RoutedEventArgs e)
-        {
-            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1TM5B8R4xSlR-omci6kaSLJXz9qfqi5fo/edit");
-        }
 
-        private void SettingProgressBar(double plRoundDown, double _basePl, double PlValue)
-        {
-            pb_power.Visibility = Visibility.Visible;
-            pb_power.Minimum = plRoundDown;
-            pb_power.Maximum = _basePl;
-            pb_power.Value = PlValue;
-        }
+
     }
 }
