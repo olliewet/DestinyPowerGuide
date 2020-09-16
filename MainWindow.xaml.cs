@@ -151,25 +151,6 @@ namespace Destiny2PowerLevelMax
         #endregion
 
         #region Functionality Methods 
-        /// <summary>
-        /// Used to Determine if the item is below the power level of the user
-        /// </summary>
-        /// <param name="item"></param>
-        /// <param name="basedown"></param>
-        /// <param name="counter"></param>
-        /// <param name="t"></param>
-        private void isItemLessThan(double item, double basedown, int counter, TextBox t)
-        {
-            if (item < basedown)
-            {
-                t.BorderBrush = System.Windows.Media.Brushes.Red;
-                counter++;
-            }
-            else
-            {
-                t.BorderBrush = System.Windows.Media.Brushes.Green;
-            }
-        }
 
         /// <summary>
         /// Method for changing the colour of the text box depending on the gear score of the piece of armour
@@ -188,14 +169,14 @@ namespace Destiny2PowerLevelMax
         private void colourchanger(int counter, double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
         {                     
             double basedown = Math.Floor(_base);
-            isItemLessThan(hel, basedown, counter, Helment_tb);
-            isItemLessThan(arms, basedown, counter, Arms_tb);
-            isItemLessThan(chest, basedown, counter, Chest_tb);
-            isItemLessThan(Legs, basedown, counter, Legs_tb);
-            isItemLessThan(Class, basedown, counter, Class_tb);
-            isItemLessThan(Prim, basedown, counter, Prim_tb);
-            isItemLessThan(secondary, basedown, counter, Sec_tb);
-            isItemLessThan(Power, basedown, counter, Power_tb);        
+            Destiny2Logic.isItemLessThan(hel, basedown, counter, Helment_tb);
+            Destiny2Logic.isItemLessThan(arms, basedown, counter, Arms_tb);
+            Destiny2Logic.isItemLessThan(chest, basedown, counter, Chest_tb);
+            Destiny2Logic.isItemLessThan(Legs, basedown, counter, Legs_tb);
+            Destiny2Logic.isItemLessThan(Class, basedown, counter, Class_tb);
+            Destiny2Logic.isItemLessThan(Prim, basedown, counter, Prim_tb);
+            Destiny2Logic.isItemLessThan(secondary, basedown, counter, Sec_tb);
+            Destiny2Logic.isItemLessThan(Power, basedown, counter, Power_tb);
             Destiny2Logic.SuggestedUpgrade(mainpower,counter, SuggestedRoute);
         }
 

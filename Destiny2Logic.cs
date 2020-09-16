@@ -110,6 +110,24 @@ namespace Destiny2PowerLevelMax
             }
         }
 
-
+        /// <summary>
+        /// Used to Determine if the item is below the power level of the user
+        /// </summary>
+        /// <param name="item"></param>
+        /// <param name="basedown"></param>
+        /// <param name="counter"></param>
+        /// <param name="t"></param>
+        public static void isItemLessThan(double item, double basedown, int counter, TextBox t)
+        {
+            if (item < basedown)
+            {
+                t.BorderBrush = System.Windows.Media.Brushes.Red;
+                counter++;
+            }
+            else
+            {
+                t.BorderBrush = System.Windows.Media.Brushes.Green;
+            }
+        }
     }
 }
