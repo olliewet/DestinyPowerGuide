@@ -37,6 +37,8 @@ Next Update Backend
 - Adding More Error Prevention 
 - Cleaning Up Code
 
+Next Add 
+- Implement Admin (the choice of seeing the actual error messages) 
 
 Bug Fix List 
 - Each Activicty as a checkbox, user can only check the same activity once, this can be used to keep a reminder of what activitys are left to complete and how long it will take   to complete the chosen activitys
