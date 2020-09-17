@@ -20,7 +20,8 @@ namespace Destiny2PowerLevelMax
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        //Variables 
+        bool isAdmin = false; 
         public MainWindow()
         {
             InitializeComponent();
@@ -120,10 +121,17 @@ namespace Destiny2PowerLevelMax
                 //Progress Bar
                 SettingProgressBar(plRoundDown, _basePl, PlValue);              
             }
-            catch
+            catch (Exception ex)
             {
-                //Very Basic Error Prevention Needs Editing 
-                MessageBox.Show("Please Enter Valid Gear Scores Within the Provided Boxes");
+                if(isAdmin == true)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+                else
+                {                   
+                    MessageBox.Show("Please Enter Valid Gear Scores Within the Provided Boxes");
+                }
+
             }
         }
 
@@ -167,17 +175,31 @@ namespace Destiny2PowerLevelMax
         /// <param name="_base"></param>
         /// <param name="mainpower"></param>
         private void colourchanger(int counter, double hel, double arms, double chest, double Class, double Legs, double Prim , double secondary, double Power, double _base, double mainpower)
-        {                     
-            double basedown = Math.Floor(_base);
-            Destiny2Logic.isItemLessThan(hel, basedown, counter, Helment_tb);
-            Destiny2Logic.isItemLessThan(arms, basedown, counter, Arms_tb);
-            Destiny2Logic.isItemLessThan(chest, basedown, counter, Chest_tb);
-            Destiny2Logic.isItemLessThan(Legs, basedown, counter, Legs_tb);
-            Destiny2Logic.isItemLessThan(Class, basedown, counter, Class_tb);
-            Destiny2Logic.isItemLessThan(Prim, basedown, counter, Prim_tb);
-            Destiny2Logic.isItemLessThan(secondary, basedown, counter, Sec_tb);
-            Destiny2Logic.isItemLessThan(Power, basedown, counter, Power_tb);
-            Destiny2Logic.SuggestedUpgrade(mainpower,counter, SuggestedRoute);
+        {
+            try
+            {
+                double basedown = Math.Floor(_base);
+                Destiny2Logic.isItemLessThan(hel, basedown, counter, Helment_tb);
+                Destiny2Logic.isItemLessThan(arms, basedown, counter, Arms_tb);
+                Destiny2Logic.isItemLessThan(chest, basedown, counter, Chest_tb);
+                Destiny2Logic.isItemLessThan(Legs, basedown, counter, Legs_tb);
+                Destiny2Logic.isItemLessThan(Class, basedown, counter, Class_tb);
+                Destiny2Logic.isItemLessThan(Prim, basedown, counter, Prim_tb);
+                Destiny2Logic.isItemLessThan(secondary, basedown, counter, Sec_tb);
+                Destiny2Logic.isItemLessThan(Power, basedown, counter, Power_tb);
+                Destiny2Logic.SuggestedUpgrade(mainpower, counter, SuggestedRoute);
+            }
+            catch(Exception exe)
+            {
+                if (isAdmin == true)
+                {
+                    MessageBox.Show("Error with Colour Changer with the error message off {0}",exe.ToString());
+                }
+                else
+                {
+                    MessageBox.Show("Please Enter Valid Gear Scores Within the Provided Boxes");
+                }
+            }
         }
 
         /// <summary>
@@ -230,13 +252,29 @@ namespace Destiny2PowerLevelMax
             this.Close();
             Prep.Show();
         }
+
+
+
+
+
+
         #endregion
 
-        
-
-
-
-
-
+        private void Admin_Click(object sender, RoutedEventArgs e)
+        {
+            if(isAdmin == false)
+            {
+                isAdmin = true;
+                MessageBox.Show("Admin has been enabled.");
+                TypeOfUser.Content = "Admin features";
+            }
+            else
+            {
+                isAdmin = false;
+                MessageBox.Show("Admin has been disabled");
+                TypeOfUser.Content = "Standard Users";
+            }          
+            
+        }
     }
 }
