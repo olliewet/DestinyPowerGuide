@@ -51,5 +51,15 @@ namespace Destiny2PowerLevelMax
             this.Close();
             prep.Show();
         }
+
+        private void Minus_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

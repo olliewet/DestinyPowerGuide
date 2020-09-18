@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="94" Height="42"/>
         <Button x:Name="Calculate" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="351,362,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="82" Height="47">
             <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
         </Button>
@@ -35,5 +35,6 @@
         <Label x:Name="Pinnacles_lb" Content="Pinnacles Rewards" HorizontalAlignment="Left" Margin="160,84,0,0" VerticalAlignment="Top"/>
         <Label x:Name="todolist_lb" Content="To Do List" HorizontalAlignment="Left" Margin="485,40,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Time_lb" FontSize="12" Content="" HorizontalAlignment="Left" Margin="485,337,0,0" VerticalAlignment="Top" Width="258" Height="44"/>
+        <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="750,0,0,0" VerticalAlignment="Top" Height="42" Click="Close_Click" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>

@@ -253,11 +253,6 @@ namespace Destiny2PowerLevelMax
             Prep.Show();
         }
 
-
-
-
-
-
         #endregion
 
         private void Admin_Click(object sender, RoutedEventArgs e)
@@ -275,6 +270,11 @@ namespace Destiny2PowerLevelMax
                 TypeOfUser.Content = "Standard Users";
             }          
             
+        }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }

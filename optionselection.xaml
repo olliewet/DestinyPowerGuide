@@ -7,15 +7,23 @@
         mc:Ignorable="d"
         Left="500" Top="300"
         ResizeMode="NoResize"     
+        WindowStyle="None"
         Title="optionselection" Height="450" Width="800">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Button x:Name="Option1_btn" Background="Transparent" BorderThickness="0" Content="Power Calculator" HorizontalAlignment="Left" Margin="50,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option1_btn_Click"/>
-        <Button x:Name="Option2_btn" Background="Transparent" BorderThickness="0" Content="To Do List" HorizontalAlignment="Left" Margin="220,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option2_btn_Click"/>
-        <Button x:Name="Option3_btn" Background="Transparent" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="408,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option3_btn_Click"/>
-        <Button x:Name="Option4_btn" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="590,316,0,0" VerticalAlignment="Top" Width="145" Height="44" Click="Option4_btn_Click"/>
+    <Grid Background="#1a8cff">
+
+        <Grid HorizontalAlignment="Left" Height="100" Margin="0,321,0,0" VerticalAlignment="Top" Width="794">
+            <Grid Background="#004080" Margin="0,0,-9,-39">
+                <Button x:Name="Option3_btn" Background="#004d99" Foreground="White" BorderThickness="0" Content="Rewards" HorizontalAlignment="Left" Margin="411,35,0,0" VerticalAlignment="Top" Width="138" Height="75" Click="Option3_btn_Click"/>
+                <Button x:Name="Option1_btn" Background="#004d99" Foreground="White" BorderThickness="0" Content="Power Calculator" HorizontalAlignment="Left" Margin="19,35,0,0" VerticalAlignment="Top" Width="145" Height="75" Click="Option1_btn_Click"/>
+                <Button x:Name="Option2_btn" Background="#004d99" Foreground="White"  BorderThickness="0" Content="To Do List" HorizontalAlignment="Left" Margin="605,35,0,0" VerticalAlignment="Top" Width="138" Height="77" Click="Option2_btn_Click"/>
+                <Button x:Name="Option4_btn" Background="#004d99" Foreground="White" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="221,35,0,0" VerticalAlignment="Top" Width="145" Height="75" Click="Option4_btn_Click"/>
+            </Grid>
+
+        </Grid>
+        <Label Content="Destiny 2 " Foreground="White" FontWeight="Bold" FontSize="26" HorizontalAlignment="Left" Margin="36,37,0,0" VerticalAlignment="Top" Width="136" Height="42"/>
+        <TextBox BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Height="129" Margin="36,79,0,0" TextWrapping="Wrap" FontSize="18" Text="This app is a destiny fan application which contains tools that are designed to help guardians along their journey!" Foreground="White" FontWeight="Light" VerticalAlignment="Top" Width="402"/>
+        <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="768,0,0,0" VerticalAlignment="Top" Width="32" Height="42" Click="Close_Click"/>
+
 
     </Grid>
 </Window>

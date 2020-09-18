@@ -26,5 +26,6 @@
             </StackPanel>
         </Button>
         <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\D2.png" HorizontalAlignment="Left" Height="124" Margin="341,78,0,0" VerticalAlignment="Top" Width="136" />
+        <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="752,0,0,0" VerticalAlignment="Top" Height="42" Click="Close_Click" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>

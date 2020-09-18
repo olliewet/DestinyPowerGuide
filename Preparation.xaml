@@ -13,6 +13,8 @@
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
-        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="605,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="129" Height="42"/>
+        <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="752,0,0,0" VerticalAlignment="Top" Height="42" Click="Close_Click" HorizontalAlignment="Left" Width="32"/>
     </Grid>
+    
 </Window>

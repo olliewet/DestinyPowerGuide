@@ -100,7 +100,9 @@ namespace Destiny2PowerLevelMax
             }
         }
 
-
-
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

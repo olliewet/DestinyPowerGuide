@@ -44,5 +44,10 @@ namespace Destiny2PowerLevelMax
             this.Close();
             optionslection.Show();
         }
+
+        private void Close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

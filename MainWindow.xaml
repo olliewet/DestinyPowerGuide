@@ -56,7 +56,7 @@
         <Label  x:Name="IncreaseVal" x:FieldModifier="public" Foreground="Black" Content="" HorizontalAlignment="Left" Margin="282,10,0,0" VerticalAlignment="Top" FontFamily="Calibri" FontSize="13" Height="32" Width="233" Grid.Row="1"/>
         <TextBlock x:Name="SuggestedRoute" HorizontalAlignment="Left" Margin="282,38,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="182" Width="233"/>
         <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="282,64,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="233" Grid.Row="1"/>
-        <Grid Background="Transparent" Margin="0,0,663,0" Grid.RowSpan="2">
+        <Grid Background="Transparent" Margin="0,0,669,0" Grid.RowSpan="2">
 
             <Button x:Name="EngramLink" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" Margin="-4,322,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="133" Height="41">
                 <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\engram.png" />
@@ -76,7 +76,7 @@
             <Label x:Name="TypeOfUser"  Content="Standard User" HorizontalAlignment="Left" Margin="27,215,0,0" VerticalAlignment="Top" Width="89" Height="33"/>
 
         </Grid>
-        <Button x:Name="Admin" Background="Transparent" BorderThickness="0" Content="Admin" HorizontalAlignment="Left" Click="Admin_Click" VerticalAlignment="Top" Width="59" Height="42" Margin="735,2,0,0"/>
-
+        <Button x:Name="Admin" Background="Transparent" BorderThickness="0" Content="Admin" HorizontalAlignment="Left" Click="Admin_Click" VerticalAlignment="Top" Width="59" Height="42" Margin="735,39,0,0"/>
+        <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="752,0,0,0" VerticalAlignment="Top" Height="42" Click="Close_Click" HorizontalAlignment="Left" Width="32"/>
     </Grid>
 </Window>
