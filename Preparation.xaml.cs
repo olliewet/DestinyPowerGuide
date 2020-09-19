@@ -35,5 +35,10 @@ namespace Destiny2PowerLevelMax
         {
             Close();
         }
+
+        private void Minus_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Minimized;
+        }
     }
 }

@@ -7,13 +7,14 @@
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
         mc:Ignorable="d"
         Left="500" Top="300"
+        WindowStyle="None"
         Title="ToDoList" Height="450" Width="800">
     <Grid x:Name="ToGrid">
         <Grid.Background>
             <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\wallpaperload.jpg" Stretch="UniformToFill"/>
         </Grid.Background>
 
-        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="663,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="94" Height="42"/>
+        <Button x:Name="Home" Background="Transparent" BorderThickness="0" Content="Home" HorizontalAlignment="Left" Margin="619,0,0,0" Click="Home_Click" VerticalAlignment="Top" Width="94" Height="42"/>
         <Button x:Name="Calculate" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Margin="351,362,0,0" Click="Calculate_Click" VerticalAlignment="Top" Width="82" Height="47">
             <Image gif:ImageBehavior.AnimatedSource="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\Ghost.gif"/>
         </Button>
@@ -30,7 +31,7 @@
         <CheckBox x:Name="clan_engram" Content="Clan Engram" HorizontalAlignment="Left" Margin="160,175,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="PitBoss_cb" Content="Pit dungeon Boss Kill" HorizontalAlignment="Left" Margin="160,195,0,0" VerticalAlignment="Top"/>
         <CheckBox x:Name="Raid_Graden" Content="Garden of salvation" HorizontalAlignment="Left" Margin="160,215,0,0" VerticalAlignment="Top"/>
-        
+        <Button x:Name="Minus" Content="-" FontSize="30" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="720,-8,0,0" VerticalAlignment="Top" Height="50" Click="Minus_Click" HorizontalAlignment="Left" Width="32"/>
         <Label x:Name="Powerful_lb" Content="Powerful Rewards" HorizontalAlignment="Left" Margin="21,84,0,0" VerticalAlignment="Top"/>
         <Label x:Name="Pinnacles_lb" Content="Pinnacles Rewards" HorizontalAlignment="Left" Margin="160,84,0,0" VerticalAlignment="Top"/>
         <Label x:Name="todolist_lb" Content="To Do List" HorizontalAlignment="Left" Margin="485,40,0,0" VerticalAlignment="Top"/>

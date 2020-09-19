@@ -20,10 +20,23 @@
             </Grid>
 
         </Grid>
-        <Label Content="Destiny 2 " Foreground="White" FontWeight="Bold" FontSize="26" HorizontalAlignment="Left" Margin="36,37,0,0" VerticalAlignment="Top" Width="136" Height="42"/>
-        <TextBox BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Height="129" Margin="36,79,0,0" TextWrapping="Wrap" FontSize="18" Text="This app is a destiny fan application which contains tools that are designed to help guardians along their journey!" Foreground="White" FontWeight="Light" VerticalAlignment="Top" Width="402"/>
+        <Label Content="Destiny 2 Tools" Foreground="White" FontWeight="Bold" FontSize="26" HorizontalAlignment="Left" Margin="36,57,0,0" VerticalAlignment="Top" Width="195" Height="42"/>
+        <TextBox  IsReadOnly="True" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" Height="84" Margin="36,95,0,0" TextWrapping="Wrap" FontSize="18" Text="This app is a destiny fan application which contains tools that are designed to help guardians along their journey!" Foreground="White" FontWeight="Light" VerticalAlignment="Top" Width="335"/>
         <Button x:Name="Close" Content="X" Background="Transparent" BorderThickness="0" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="768,0,0,0" VerticalAlignment="Top" Width="32" Height="42" Click="Close_Click"/>
+        <Button x:Name="Mini" Content="-" Background="Transparent" BorderThickness="0" FontSize="30" Foreground="White" FontWeight="Bold" HorizontalAlignment="Left" Margin="736,-7,0,0" VerticalAlignment="Top" Width="32" Height="49" Click="Mini_Click"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="427,79,0,0" VerticalAlignment="Top" Width="100"/>
+        <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\destiny1img.jpg" Margin="407,57,32,198" />
+        <Label Content="Useful Links" Foreground="White" FontWeight="Light"  FontSize="23" HorizontalAlignment="Left" Margin="0,237,0,0" VerticalAlignment="Top" Width="195" Height="42"/>
+        <Grid Background="#004d99" HorizontalAlignment="Left" Height="43" Margin="0,278,0,0" VerticalAlignment="Top" Width="253">
+            <Button x:Name="Link1_btn" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" VerticalAlignment="Top" Width="63" Height="43" Click="Link1_btn_Click">
+                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\DIM.png" />
+            </Button>
+            <Button x:Name="Link2_btn"  Foreground="White" BorderThickness="0" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Width="72" Height="43" Click="Link2_btn_Click" Margin="68,0,0,0">
+                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\engram.png" />
+            </Button>
+            <Button x:Name="Link3_btn" Background="Transparent" Foreground="White" BorderThickness="0" Content="Complete Guide" HorizontalAlignment="Left" VerticalAlignment="Top" Width="106" Height="43" Click="Link3_btn_Click" Margin="147,0,0,0"/>
 
+        </Grid>
 
     </Grid>
 </Window>

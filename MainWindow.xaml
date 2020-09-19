@@ -9,6 +9,7 @@
         WindowStartupLocation="Manual" 
         Left="500" Top="300"
         ResizeMode="NoResize"
+        WindowStyle="None"      
         Title="MainWindow" Height="450" Width="800">
 
     <Grid>
@@ -37,7 +38,7 @@
 
         <TextBox x:Name="Prim_tb" HorizontalAlignment="Left" Height="23" Margin="143,58,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label x:Name="Prim_lb" Content="Primary Weapon" HorizontalAlignment="Left" Margin="143,27,0,0" VerticalAlignment="Top"/>
-
+        <Button x:Name="Minus" Content="-" FontSize="30" Background="Transparent" BorderThickness="0" Foreground="black" FontWeight="Bold" Margin="720,-8,0,0" VerticalAlignment="Top" Height="50" Click="Minus_Click" HorizontalAlignment="Left" Width="32"/>
 
         <!-- <TextBox x:Name="Result" HorizontalAlignment="Left" Height="23" Margin="624,39,0,0" TextWrapping="Wrap" Text="{Binding Path=Result,Mode=TwoWay}" VerticalAlignment="Top" Width="120" Grid.Row="1"/> -->
         <TextBox x:Name="Sec_tb" HorizontalAlignment="Left" Height="23" Margin="143,117,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
@@ -58,13 +59,9 @@
         <ProgressBar x:Name="pb_power"  Foreground="LightBlue" HorizontalAlignment="Left" Height="13" Margin="282,64,0,0" Value="{Binding APower}" VerticalAlignment="Top" Width="233" Grid.Row="1"/>
         <Grid Background="Transparent" Margin="0,0,669,0" Grid.RowSpan="2">
 
-            <Button x:Name="EngramLink" Background="Transparent" BorderThickness="0"  HorizontalAlignment="Left" Margin="-4,322,0,0" Click="EngramLink_Click" VerticalAlignment="Top" Width="133" Height="41">
-                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\engram.png" />
-            </Button>
-            <Button x:Name="DestinyItem" Background="Transparent" BorderThickness="0" HorizontalAlignment="Left" Margin="-4,368,0,0" Click="DestinyItem_Click" VerticalAlignment="Top" Width="133" Height="41">
-                <Image Source="C:\Users\Ollie\Desktop\Work\Year 3\Destiny2PowerLevelMax\Assets\DIM.png" />
-            </Button>
-            <Label Content="Useful Links" HorizontalAlignment="Left" Margin="27,254,0,0" VerticalAlignment="Top"/>
+            
+           
+            
             <Label x:Name="PowerIndicator"  Content="Currently on:" HorizontalAlignment="Left" Margin="549,345,-515,0" VerticalAlignment="Top" Width="95"/>
             <Label x:Name="TypeOfGrind"  Content="" HorizontalAlignment="Left" Margin="549,376,-574,0" VerticalAlignment="Top" Width="154" Height="33"/>
             <Button x:Name="Fill_Values" Background="Transparent" BorderThickness="0" Content="Fill Values" HorizontalAlignment="Left" Click="Fill_Values_Click" VerticalAlignment="Top" Width="129" Height="42"/>
@@ -72,7 +69,7 @@
             <Button x:Name="Prep" Background="Transparent" BorderThickness="0" Content="Preparation" HorizontalAlignment="Left" Margin="0,84,0,0" Click="Prep_Click"  VerticalAlignment="Top" Width="129" Height="42" />
             <Button x:Name="ToDo" Background="Transparent" BorderThickness="0" Content="To Do List" HorizontalAlignment="Left" Margin="0,126,0,0" Click="ToDo_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
             <Button x:Name="Help" Background="Transparent" BorderThickness="0" Content="Help" HorizontalAlignment="Left" Margin="0,168,0,0" Click="ToDo_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
-            <Button x:Name="CompleteGuide" Background="Transparent" BorderThickness="0" Content="Complete Guide" HorizontalAlignment="Left" Margin="2,280,0,0" Click="CG_Click"  VerticalAlignment="Top" Width="129" Height="42"/>
+   
             <Label x:Name="TypeOfUser"  Content="Standard User" HorizontalAlignment="Left" Margin="27,215,0,0" VerticalAlignment="Top" Width="89" Height="33"/>
 
         </Grid>

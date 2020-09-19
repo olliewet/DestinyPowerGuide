@@ -61,5 +61,25 @@ namespace Destiny2PowerLevelMax
         {
             Close();
         }
+
+        private void Mini_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = System.Windows.WindowState.Minimized;
+        }
+
+        private void Link1_btn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://destinyitemmanager.com/");
+        }
+
+        private void Link2_btn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://vendorengrams.xyz/");
+        }
+
+        private void Link3_btn_Click(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://docs.google.com/document/d/1TM5B8R4xSlR-omci6kaSLJXz9qfqi5fo/edit");
+        }
     }
 }
